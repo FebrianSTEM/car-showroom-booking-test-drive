@@ -2,20 +2,45 @@ import axios from 'axios';
 import { StandardResponse } from '../../models/standardResponse';
 import { CarBookingRequest } from '../../models/request/booking/createBookingRequest';
 import { CarBookingResponse } from '../../models/response/booking/bookingResponse';
+import { PaginatedResponse } from '../../models/paginatedResponse';
+import { GetPagingBookingRequest } from '../../models/request/booking/getPagingBookingRequest';
 
 const bookingApiConnector = {
-    createBooking: async (req: CarBookingRequest): Promise<CarBookingResponse> => {
-        try{
+    createBooking: async (
+        req: CarBookingRequest
+    ): Promise<StandardResponse<CarBookingResponse>> => {
+        try {
             const token = localStorage.getItem('token');
-            const response: StandardResponse<CarBookingResponse> = await axios.post(`/carBooking/Booking`, req, {headers: { Authorization: `Bearer ${token}`}});
-            const authResponse = response.data;
-            return authResponse;
+            const response = await axios.post<StandardResponse<CarBookingResponse>>(
+                `/carBooking/Booking`,
+                req,
+                { headers: { Authorization: `Bearer ${token}` } }
+            );
+            return response.data;
+        } catch (error) {
+            console.error(error);
+            throw error;
         }
-        catch (error) {
-            console.log(error);
+    },
+
+    getPagingBooking: async (
+        req: GetPagingBookingRequest
+    ): Promise<PaginatedResponse<CarBookingResponse[]>> => {
+        try {
+            const token = localStorage.getItem('token');
+            const response = await axios.get<PaginatedResponse<CarBookingResponse[]>>(
+                '/carBooking/Booking/paging',
+                {
+                    params: req,
+                    headers: { Authorization: `Bearer ${token}` }
+                }
+            );
+            return response.data;
+        } catch (error) {
+            console.error(error);
             throw error;
         }
     }
-}
+};
 
 export default bookingApiConnector;

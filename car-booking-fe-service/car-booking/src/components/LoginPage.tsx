@@ -62,7 +62,6 @@ const LoginPage: React.FC = () => {
           localStorage.setItem("token", _res.data.token);
           localStorage.setItem("roles", JSON.stringify(_res.data.user.roles));
           toast.success('User logged in successfully!');
-          // Navigate to dashboard or home
           navigate(`/carList`)
         })
         .catch((err) => {

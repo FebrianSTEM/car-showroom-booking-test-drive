@@ -16,7 +16,6 @@ import {
   DialogTitle,
 } from '@mui/material';
 import { CarModelResponse } from '../models/response/carModel/carModelResponse';
-import axios from 'axios';
 import carModelApiConnector from '../api/carModel/carModelApiConnector';
 import bookingApiConnector from '../api/booking/bookingApiConnector';
 import { toast } from 'react-toastify';

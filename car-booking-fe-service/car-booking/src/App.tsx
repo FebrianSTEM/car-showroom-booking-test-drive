@@ -10,20 +10,20 @@ import CarDetailPage from './components/CarDetailPage';
 import TopBar from './components/topBar';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import MyBookingPage from './components/MyBookingPage';
 
 function App() {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <TopBar />
-      <BrowserRouter>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegistrationPage />} />
           <Route path="/carList" element={<CarModelListPage />} />
           <Route path="/carDetail/:id" element={<CarDetailPage />} />
+          <Route path="/myBooking" element={<MyBookingPage />} />
           <Route path="/" element={<Navigate to="/carList" replace />} />
         </Routes>
-      </BrowserRouter>
       <ToastContainer position="top-right" autoClose={3000} />
     </LocalizationProvider>
   );
