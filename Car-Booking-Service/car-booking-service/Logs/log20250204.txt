@@ -1,0 +1,463 @@
+2025-02-04 10:59:29.651 +07:00 [INF] Now listening on: https://localhost:7125
+2025-02-04 10:59:29.676 +07:00 [INF] Now listening on: http://localhost:5276
+2025-02-04 10:59:29.753 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-04 10:59:29.753 +07:00 [INF] Hosting environment: Development
+2025-02-04 10:59:29.753 +07:00 [INF] Content root path: D:\Belajar\Car-Booking-Service\car-booking-service
+2025-02-04 10:59:30.039 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-02-04 10:59:30.231 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 196.5377ms
+2025-02-04 10:59:30.233 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-04 10:59:30.233 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-02-04 10:59:30.247 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 14.4585ms
+2025-02-04 10:59:30.300 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.6277ms
+2025-02-04 10:59:30.337 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-02-04 10:59:30.360 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 23.7436ms
+2025-02-04 11:00:01.080 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/CarModels - application/json 111
+2025-02-04 11:00:01.087 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 11:00:01.109 +07:00 [INF] Route matched with {action = "CreateCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]] CreateCarModel(car_booking_service.Application.Models.Requests.CarModelRequests.CreateCarModelRequest) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 11:00:02.114 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 11:00:02.125 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 11:00:02.139 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service) in 1027.8263ms
+2025-02-04 11:00:02.139 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 11:00:02.142 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/CarModels - 201 null application/json; charset=utf-8 1061.9202ms
+2025-02-04 11:00:25.580 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/Booking - application/json 174
+2025-02-04 11:00:25.581 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 11:00:25.586 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse]] CreateBooking(car_booking_service.Application.Models.Requests.BookingRequests.CreateBookingRequest) on controller car_booking_service.Controllers.BookingController (car-booking-service).
+2025-02-04 11:00:25.825 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 11:00:25.828 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 11:00:25.831 +07:00 [INF] Executed action car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service) in 244.7208ms
+2025-02-04 11:00:25.831 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 11:00:25.831 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/Booking - 201 null application/json; charset=utf-8 251.4783ms
+2025-02-04 11:00:33.385 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7125/api/Booking - null null
+2025-02-04 11:00:33.385 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.BookingController.GetAllBooking (car-booking-service)'
+2025-02-04 11:00:33.391 +07:00 [INF] Route matched with {action = "GetAllBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse]]] GetAllBooking() on controller car_booking_service.Controllers.BookingController (car-booking-service).
+2025-02-04 11:00:33.425 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-04 11:00:33.426 +07:00 [INF] Executed action car_booking_service.Controllers.BookingController.GetAllBooking (car-booking-service) in 35.1766ms
+2025-02-04 11:00:33.426 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.BookingController.GetAllBooking (car-booking-service)'
+2025-02-04 11:00:33.426 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7125/api/Booking - 200 null application/json; charset=utf-8 41.8816ms
+2025-02-04 11:35:58.113 +07:00 [INF] Now listening on: https://localhost:7125
+2025-02-04 11:35:58.134 +07:00 [INF] Now listening on: http://localhost:5276
+2025-02-04 11:35:58.206 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-04 11:35:58.207 +07:00 [INF] Hosting environment: Development
+2025-02-04 11:35:58.207 +07:00 [INF] Content root path: D:\Belajar\Car-Booking-Service\car-booking-service
+2025-02-04 11:35:59.077 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-02-04 11:35:59.238 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 165.6957ms
+2025-02-04 11:35:59.241 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-04 11:35:59.241 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-02-04 11:35:59.247 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 6.2491ms
+2025-02-04 11:35:59.275 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.1855ms
+2025-02-04 11:35:59.304 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-02-04 11:35:59.324 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.2581ms
+2025-02-04 11:36:06.228 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/CarModels - application/json 111
+2025-02-04 11:36:06.233 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 11:36:06.250 +07:00 [INF] Route matched with {action = "CreateCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]] CreateCarModel(car_booking_service.Application.Models.Requests.CarModelRequests.CreateCarModelRequest) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 11:36:07.159 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 11:36:07.170 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 11:36:07.183 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service) in 931.1592ms
+2025-02-04 11:36:07.184 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 11:36:07.186 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/CarModels - 201 null application/json; charset=utf-8 957.6941ms
+2025-02-04 11:36:11.349 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/Booking - application/json 174
+2025-02-04 11:36:11.350 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 11:36:11.353 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse]] CreateBooking(car_booking_service.Application.Models.Requests.BookingRequests.CreateBookingRequest) on controller car_booking_service.Controllers.BookingController (car-booking-service).
+2025-02-04 11:36:11.602 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 11:36:11.605 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 11:36:11.608 +07:00 [INF] Executed action car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service) in 254.4239ms
+2025-02-04 11:36:11.608 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 11:36:11.608 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/Booking - 201 null application/json; charset=utf-8 258.5457ms
+2025-02-04 11:36:18.480 +07:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - null null
+2025-02-04 11:36:18.481 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 11:36:18.484 +07:00 [INF] Route matched with {action = "DeleteCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteCarModel(Int32) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 11:36:18.508 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 11:36:18.510 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 11:36:18.516 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service) in 32.1373ms
+2025-02-04 11:36:18.518 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 11:36:18.581 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at car_booking_service.Middlewares.ExceptionHandlingMiddleware.Invoke(HttpContext context) in D:\Belajar\Car-Booking-Service\car-booking-service\Middlewares\ExceptionHandlingMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-04 11:36:18.609 +07:00 [WRN] The response has already started, the error page middleware will not be executed.
+2025-02-04 11:36:18.612 +07:00 [ERR] Connection id "0HNA4QLLSHF1H", Request id "0HNA4QLLSHF1H:00000003": An unhandled exception was thrown by the application.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at car_booking_service.Middlewares.ExceptionHandlingMiddleware.Invoke(HttpContext context) in D:\Belajar\Car-Booking-Service\car-booking-service\Middlewares\ExceptionHandlingMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-02-04 11:36:18.623 +07:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - 204 null application/json; charset=utf-8 143.002ms
+2025-02-04 11:36:28.261 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7125/api/CarModels - null null
+2025-02-04 11:36:28.262 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-02-04 11:36:28.264 +07:00 [INF] Route matched with {action = "GetAllCarModels", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]]] GetAllCarModels() on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 11:36:28.276 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-04 11:36:28.278 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service) in 13.4624ms
+2025-02-04 11:36:28.278 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-02-04 11:36:28.278 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7125/api/CarModels - 200 null application/json; charset=utf-8 16.3972ms
+2025-02-04 11:36:33.933 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7125/api/Booking - null null
+2025-02-04 11:36:33.933 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.BookingController.GetAllBooking (car-booking-service)'
+2025-02-04 11:36:33.935 +07:00 [INF] Route matched with {action = "GetAllBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse]]] GetAllBooking() on controller car_booking_service.Controllers.BookingController (car-booking-service).
+2025-02-04 11:36:33.950 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-04 11:36:33.951 +07:00 [INF] Executed action car_booking_service.Controllers.BookingController.GetAllBooking (car-booking-service) in 15.9526ms
+2025-02-04 11:36:33.951 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.BookingController.GetAllBooking (car-booking-service)'
+2025-02-04 11:36:33.951 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7125/api/Booking - 200 null application/json; charset=utf-8 18.3857ms
+2025-02-04 11:36:50.882 +07:00 [INF] Now listening on: https://localhost:7125
+2025-02-04 11:36:50.903 +07:00 [INF] Now listening on: http://localhost:5276
+2025-02-04 11:36:50.980 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-04 11:36:50.981 +07:00 [INF] Hosting environment: Development
+2025-02-04 11:36:50.981 +07:00 [INF] Content root path: D:\Belajar\Car-Booking-Service\car-booking-service
+2025-02-04 11:36:51.601 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-02-04 11:36:51.747 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 151.3205ms
+2025-02-04 11:36:51.752 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-02-04 11:36:51.752 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-04 11:36:51.756 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 4.5305ms
+2025-02-04 11:36:51.784 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.0211ms
+2025-02-04 11:36:51.812 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-02-04 11:36:51.831 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.3671ms
+2025-02-04 11:36:58.305 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/CarModels - application/json 111
+2025-02-04 11:36:58.311 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 11:36:58.328 +07:00 [INF] Route matched with {action = "CreateCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]] CreateCarModel(car_booking_service.Application.Models.Requests.CarModelRequests.CreateCarModelRequest) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 11:36:58.915 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 11:36:58.929 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 11:36:58.945 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service) in 614.0848ms
+2025-02-04 11:36:58.945 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 11:36:58.948 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/CarModels - 201 null application/json; charset=utf-8 642.8034ms
+2025-02-04 11:37:02.403 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/Booking - application/json 174
+2025-02-04 11:37:02.404 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 11:37:02.410 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse]] CreateBooking(car_booking_service.Application.Models.Requests.BookingRequests.CreateBookingRequest) on controller car_booking_service.Controllers.BookingController (car-booking-service).
+2025-02-04 11:37:02.633 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 11:37:02.636 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 11:37:02.639 +07:00 [INF] Executed action car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service) in 228.9518ms
+2025-02-04 11:37:02.639 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 11:37:02.639 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/Booking - 201 null application/json; charset=utf-8 236.0529ms
+2025-02-04 11:37:07.685 +07:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - null null
+2025-02-04 11:37:07.685 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 11:37:07.688 +07:00 [INF] Route matched with {action = "DeleteCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteCarModel(Int32) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 11:37:07.713 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 11:37:07.714 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 11:37:07.719 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service) in 30.6389ms
+2025-02-04 11:37:07.719 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 11:37:07.773 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at car_booking_service.Middlewares.ExceptionHandlingMiddleware.Invoke(HttpContext context) in D:\Belajar\Car-Booking-Service\car-booking-service\Middlewares\ExceptionHandlingMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-04 11:37:07.793 +07:00 [WRN] The response has already started, the error page middleware will not be executed.
+2025-02-04 11:37:07.794 +07:00 [ERR] Connection id "0HNA4QM5IMIJT", Request id "0HNA4QM5IMIJT:00000003": An unhandled exception was thrown by the application.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at car_booking_service.Middlewares.ExceptionHandlingMiddleware.Invoke(HttpContext context) in D:\Belajar\Car-Booking-Service\car-booking-service\Middlewares\ExceptionHandlingMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-02-04 11:37:07.796 +07:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - 204 null application/json; charset=utf-8 111.6171ms
+2025-02-04 11:37:12.515 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7125/api/CarModels - null null
+2025-02-04 11:37:12.515 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-02-04 11:37:12.518 +07:00 [INF] Route matched with {action = "GetAllCarModels", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]]] GetAllCarModels() on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 11:37:12.530 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-04 11:37:12.531 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service) in 12.9664ms
+2025-02-04 11:37:12.531 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-02-04 11:37:12.531 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7125/api/CarModels - 200 null application/json; charset=utf-8 15.7911ms
+2025-02-04 11:37:16.367 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7125/api/Booking - null null
+2025-02-04 11:37:16.367 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.BookingController.GetAllBooking (car-booking-service)'
+2025-02-04 11:37:16.370 +07:00 [INF] Route matched with {action = "GetAllBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse]]] GetAllBooking() on controller car_booking_service.Controllers.BookingController (car-booking-service).
+2025-02-04 11:37:16.383 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-04 11:37:16.384 +07:00 [INF] Executed action car_booking_service.Controllers.BookingController.GetAllBooking (car-booking-service) in 14.2492ms
+2025-02-04 11:37:16.384 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.BookingController.GetAllBooking (car-booking-service)'
+2025-02-04 11:37:16.384 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7125/api/Booking - 200 null application/json; charset=utf-8 17.1969ms
+2025-02-04 11:37:23.093 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/CarModels - application/json 111
+2025-02-04 11:37:23.094 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 11:37:23.094 +07:00 [INF] Route matched with {action = "CreateCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]] CreateCarModel(car_booking_service.Application.Models.Requests.CarModelRequests.CreateCarModelRequest) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 11:37:23.095 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 11:37:23.095 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 11:37:23.095 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service) in 1.4625ms
+2025-02-04 11:37:23.095 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 11:37:23.095 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/CarModels - 201 null application/json; charset=utf-8 2.4568ms
+2025-02-04 11:37:26.257 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7125/api/CarModels - null null
+2025-02-04 11:37:26.257 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-02-04 11:37:26.258 +07:00 [INF] Route matched with {action = "GetAllCarModels", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]]] GetAllCarModels() on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 11:37:26.258 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-02-04 11:37:26.259 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service) in 0.9379ms
+2025-02-04 11:37:26.259 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-02-04 11:37:26.259 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7125/api/CarModels - 200 null application/json; charset=utf-8 1.676ms
+2025-02-04 11:44:49.948 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-02-04 11:44:49.988 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-02-04 11:44:49.989 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 41.4628ms
+2025-02-04 11:44:49.989 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-04 11:44:49.998 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 10.1943ms
+2025-02-04 11:44:50.023 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.6117ms
+2025-02-04 11:44:50.084 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-02-04 11:44:50.106 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.3274ms
+2025-02-04 11:44:54.412 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/CarModels - application/json 111
+2025-02-04 11:44:54.412 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 11:44:54.412 +07:00 [INF] Route matched with {action = "CreateCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]] CreateCarModel(car_booking_service.Application.Models.Requests.CarModelRequests.CreateCarModelRequest) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 11:44:54.414 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 11:44:54.414 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 11:44:54.414 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service) in 1.8335ms
+2025-02-04 11:44:54.414 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 11:44:54.414 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/CarModels - 201 null application/json; charset=utf-8 2.2474ms
+2025-02-04 11:45:01.186 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/Booking - application/json 174
+2025-02-04 11:45:01.186 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 11:45:01.186 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse]] CreateBooking(car_booking_service.Application.Models.Requests.BookingRequests.CreateBookingRequest) on controller car_booking_service.Controllers.BookingController (car-booking-service).
+2025-02-04 11:45:01.282 +07:00 [ERR] Failed Create booking for Santoso : Selected Car Model with ID 1 not found
+car_booking_service.Domain.Exception.HttpStatusCodeException: Selected Car Model with ID 1 not found
+   at car_booking_service.Application.Services.Implementations.BookingService.ValidateCarModel(Int32 carId) in D:\Belajar\Car-Booking-Service\car-booking-service.Application\Services\Implementations\BookingService.cs:line 141
+   at car_booking_service.Application.Services.Implementations.BookingService.ValidateRequestCreateBookingAsync(CreateBookingRequest request) in D:\Belajar\Car-Booking-Service\car-booking-service.Application\Services\Implementations\BookingService.cs:line 132
+   at car_booking_service.Application.Services.Implementations.BookingService.CreateBookingAsync(CreateBookingRequest request) in D:\Belajar\Car-Booking-Service\car-booking-service.Application\Services\Implementations\BookingService.cs:line 84
+   at car_booking_service.Controllers.BookingController.CreateBooking(CreateBookingRequest request) in D:\Belajar\Car-Booking-Service\car-booking-service\Controllers\BookingController.cs:line 184
+2025-02-04 11:45:01.289 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 11:45:01.289 +07:00 [INF] Executed action car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service) in 102.3343ms
+2025-02-04 11:45:01.289 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 11:45:01.289 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/Booking - 422 null application/json; charset=utf-8 102.784ms
+2025-02-04 13:14:41.502 +07:00 [INF] Now listening on: https://localhost:7125
+2025-02-04 13:14:41.522 +07:00 [INF] Now listening on: http://localhost:5276
+2025-02-04 13:14:41.635 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-04 13:14:41.636 +07:00 [INF] Hosting environment: Development
+2025-02-04 13:14:41.636 +07:00 [INF] Content root path: D:\Belajar\Car-Booking-Service\car-booking-service
+2025-02-04 13:14:42.123 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-02-04 13:14:42.296 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 182.2297ms
+2025-02-04 13:14:42.299 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-02-04 13:14:42.299 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-04 13:14:42.304 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 5.739ms
+2025-02-04 13:14:42.335 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.7068ms
+2025-02-04 13:14:42.370 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-02-04 13:14:42.388 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.1325ms
+2025-02-04 13:14:47.637 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/CarModels - application/json 111
+2025-02-04 13:14:47.642 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 13:14:47.658 +07:00 [INF] Route matched with {action = "CreateCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]] CreateCarModel(car_booking_service.Application.Models.Requests.CarModelRequests.CreateCarModelRequest) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 13:14:48.296 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 13:14:48.308 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 13:14:48.322 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service) in 661.2056ms
+2025-02-04 13:14:48.322 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 13:14:48.324 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/CarModels - 201 null application/json; charset=utf-8 687.3499ms
+2025-02-04 13:14:54.193 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/Booking - application/json 174
+2025-02-04 13:14:54.193 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 13:14:54.197 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse]] CreateBooking(car_booking_service.Application.Models.Requests.BookingRequests.CreateBookingRequest) on controller car_booking_service.Controllers.BookingController (car-booking-service).
+2025-02-04 13:14:54.441 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 13:14:54.445 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 13:14:54.450 +07:00 [INF] Executed action car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service) in 253.2158ms
+2025-02-04 13:14:54.450 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 13:14:54.450 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/Booking - 201 null application/json; charset=utf-8 257.5524ms
+2025-02-04 13:14:57.845 +07:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - null null
+2025-02-04 13:14:57.845 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 13:14:57.849 +07:00 [INF] Route matched with {action = "DeleteCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteCarModel(Int32) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 13:14:57.891 +07:00 [INF] Saved 2 entities to in-memory store.
+2025-02-04 13:14:57.899 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 13:14:57.906 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service) in 57.4208ms
+2025-02-04 13:14:57.907 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 13:14:57.976 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at car_booking_service.Middlewares.ExceptionHandlingMiddleware.Invoke(HttpContext context) in D:\Belajar\Car-Booking-Service\car-booking-service\Middlewares\ExceptionHandlingMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-02-04 13:14:58.004 +07:00 [WRN] The response has already started, the error page middleware will not be executed.
+2025-02-04 13:14:58.006 +07:00 [ERR] Connection id "0HNA4SCR61B69", Request id "0HNA4SCR61B69:00000003": An unhandled exception was thrown by the application.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ThrowResponseAlreadyStartedException(String value)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.set_StatusCode(Int32 value)
+   at car_booking_service.Middlewares.ExceptionHandlingMiddleware.Invoke(HttpContext context) in D:\Belajar\Car-Booking-Service\car-booking-service\Middlewares\ExceptionHandlingMiddleware.cs:line 33
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-02-04 13:14:58.019 +07:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - 204 null application/json; charset=utf-8 174.7472ms
+2025-02-04 13:15:36.448 +07:00 [INF] Now listening on: https://localhost:7125
+2025-02-04 13:15:36.467 +07:00 [INF] Now listening on: http://localhost:5276
+2025-02-04 13:15:36.540 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-04 13:15:36.540 +07:00 [INF] Hosting environment: Development
+2025-02-04 13:15:36.541 +07:00 [INF] Content root path: D:\Belajar\Car-Booking-Service\car-booking-service
+2025-02-04 13:15:37.324 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-02-04 13:15:37.491 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 172.3432ms
+2025-02-04 13:15:37.495 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-02-04 13:15:37.495 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-04 13:15:37.500 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 5.265ms
+2025-02-04 13:15:37.530 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.4538ms
+2025-02-04 13:15:37.563 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-02-04 13:15:37.582 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.9108ms
+2025-02-04 13:16:02.564 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/CarModels - application/json 111
+2025-02-04 13:16:02.570 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 13:16:02.586 +07:00 [INF] Route matched with {action = "CreateCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]] CreateCarModel(car_booking_service.Application.Models.Requests.CarModelRequests.CreateCarModelRequest) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 13:16:03.155 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 13:16:03.166 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 13:16:03.178 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service) in 589.3003ms
+2025-02-04 13:16:03.178 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 13:16:03.180 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/CarModels - 201 null application/json; charset=utf-8 616.1405ms
+2025-02-04 13:16:06.983 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/Booking - application/json 174
+2025-02-04 13:16:06.984 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 13:16:06.990 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse]] CreateBooking(car_booking_service.Application.Models.Requests.BookingRequests.CreateBookingRequest) on controller car_booking_service.Controllers.BookingController (car-booking-service).
+2025-02-04 13:16:07.224 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 13:16:07.228 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 13:16:07.230 +07:00 [INF] Executed action car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service) in 239.8194ms
+2025-02-04 13:16:07.230 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 13:16:07.230 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/Booking - 201 null application/json; charset=utf-8 247.609ms
+2025-02-04 13:16:10.917 +07:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - null null
+2025-02-04 13:16:10.918 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 13:16:10.928 +07:00 [INF] Route matched with {action = "DeleteCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteCarModel(Int32) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 13:16:11.079 +07:00 [ERR] Failed Delete Car Model Data with id : 1
+System.ArgumentException: Error occurred while delete the CarModel
+ ---> System.InvalidOperationException: The association between entity types 'CarModel' and 'Booking' has been severed, but the relationship is either marked as required or is implicitly required because the foreign key is not nullable. If the dependent/child entity should be deleted when a required relationship is severed, configure the relationship to use cascade deletes. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.HandleConceptualNulls(Boolean sensitiveLoggingEnabled, Boolean force, Boolean isCascadeDelete)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.CascadeDelete(InternalEntityEntry entry, Boolean force, IEnumerable`1 foreignKeys)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry.set_State(EntityState value)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Remove(TEntity entity)
+   at car_booking_service.Infrastructure.Repositories.GenericRepository`1.DeleteAsync(T entity) in D:\Belajar\Car-Booking-Service\car-booking-service.Infrastructure\Repositories\GenericRepository.cs:line 97
+   --- End of inner exception stack trace ---
+   at car_booking_service.Infrastructure.Repositories.GenericRepository`1.DeleteAsync(T entity) in D:\Belajar\Car-Booking-Service\car-booking-service.Infrastructure\Repositories\GenericRepository.cs:line 104
+   at car_booking_service.Application.Services.Implementations.CarModelService.DeleteCarModelAsync(Int32 id) in D:\Belajar\Car-Booking-Service\car-booking-service.Application\Services\Implementations\CarModelService.cs:line 69
+   at car_booking_service.Controllers.CarModelsController.DeleteCarModel(Int32 carId) in D:\Belajar\Car-Booking-Service\car-booking-service\Controllers\CarModelController.cs:line 259
+2025-02-04 13:16:11.105 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 13:16:11.106 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service) in 177.5628ms
+2025-02-04 13:16:11.106 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 13:16:11.106 +07:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - 500 null application/json; charset=utf-8 189.8625ms
+2025-02-04 13:17:08.477 +07:00 [INF] Now listening on: https://localhost:7125
+2025-02-04 13:17:08.497 +07:00 [INF] Now listening on: http://localhost:5276
+2025-02-04 13:17:08.580 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-04 13:17:08.580 +07:00 [INF] Hosting environment: Development
+2025-02-04 13:17:08.580 +07:00 [INF] Content root path: D:\Belajar\Car-Booking-Service\car-booking-service
+2025-02-04 13:17:09.044 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-02-04 13:17:09.211 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 170.7866ms
+2025-02-04 13:17:09.218 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-04 13:17:09.220 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-02-04 13:17:09.237 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 19.6728ms
+2025-02-04 13:17:09.273 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.2565ms
+2025-02-04 13:17:09.308 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-02-04 13:17:09.337 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.2123ms
+2025-02-04 13:17:21.935 +07:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - null null
+2025-02-04 13:17:21.941 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 13:17:21.959 +07:00 [INF] Route matched with {action = "DeleteCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteCarModel(Int32) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 13:17:22.614 +07:00 [ERR] Failed Delete Car Model Data with id : 1,Car model with ID 1 not found
+car_booking_service.Domain.Exception.HttpStatusCodeException: Car model with ID 1 not found
+   at car_booking_service.Application.Services.Implementations.CarModelService.DeleteCarModelAsync(Int32 id) in D:\Belajar\Car-Booking-Service\car-booking-service.Application\Services\Implementations\CarModelService.cs:line 67
+   at car_booking_service.Controllers.CarModelsController.DeleteCarModel(Int32 carId) in D:\Belajar\Car-Booking-Service\car-booking-service\Controllers\CarModelController.cs:line 259
+2025-02-04 13:17:22.648 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 13:17:22.660 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service) in 698.263ms
+2025-02-04 13:17:22.660 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 13:17:22.663 +07:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - 404 null application/json; charset=utf-8 727.6795ms
+2025-02-04 13:18:14.822 +07:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - null null
+2025-02-04 13:18:14.823 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 13:18:14.823 +07:00 [INF] Route matched with {action = "DeleteCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteCarModel(Int32) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 13:18:14.891 +07:00 [ERR] Failed Delete Car Model Data with id : 1,Car model with ID 1 not found
+car_booking_service.Domain.Exception.HttpStatusCodeException: Car model with ID 1 not found
+   at car_booking_service.Application.Services.Implementations.CarModelService.DeleteCarModelAsync(Int32 id) in D:\Belajar\Car-Booking-Service\car-booking-service.Application\Services\Implementations\CarModelService.cs:line 67
+   at car_booking_service.Controllers.CarModelsController.DeleteCarModel(Int32 carId) in D:\Belajar\Car-Booking-Service\car-booking-service\Controllers\CarModelController.cs:line 259
+2025-02-04 13:18:14.892 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 13:18:14.892 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service) in 69.1442ms
+2025-02-04 13:18:14.892 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 13:18:14.893 +07:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - 404 null application/json; charset=utf-8 70.76ms
+2025-02-04 13:18:26.807 +07:00 [INF] Now listening on: https://localhost:7125
+2025-02-04 13:18:26.844 +07:00 [INF] Now listening on: http://localhost:5276
+2025-02-04 13:18:26.929 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-04 13:18:26.930 +07:00 [INF] Hosting environment: Development
+2025-02-04 13:18:26.930 +07:00 [INF] Content root path: D:\Belajar\Car-Booking-Service\car-booking-service
+2025-02-04 13:18:27.313 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-02-04 13:18:27.474 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 167.1815ms
+2025-02-04 13:18:27.480 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-04 13:18:27.480 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-02-04 13:18:27.485 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 5.048ms
+2025-02-04 13:18:27.515 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.2832ms
+2025-02-04 13:18:27.542 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-02-04 13:18:27.560 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.564ms
+2025-02-04 13:18:30.908 +07:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - null null
+2025-02-04 13:18:30.914 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 13:18:30.933 +07:00 [INF] Route matched with {action = "DeleteCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteCarModel(Int32) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 13:18:31.564 +07:00 [ERR] Failed Delete Car Model Data with id : 1, Car model with ID 1 not found
+car_booking_service.Domain.Exception.HttpStatusCodeException: Car model with ID 1 not found
+   at car_booking_service.Application.Services.Implementations.CarModelService.DeleteCarModelAsync(Int32 id) in D:\Belajar\Car-Booking-Service\car-booking-service.Application\Services\Implementations\CarModelService.cs:line 67
+   at car_booking_service.Controllers.CarModelsController.DeleteCarModel(Int32 carId) in D:\Belajar\Car-Booking-Service\car-booking-service\Controllers\CarModelController.cs:line 259
+2025-02-04 13:18:31.598 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 13:18:31.609 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service) in 674.2051ms
+2025-02-04 13:18:31.609 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 13:18:31.611 +07:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - 404 null application/json; charset=utf-8 703.2821ms
+2025-02-04 13:18:41.063 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/CarModels - application/json 111
+2025-02-04 13:18:41.063 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 13:18:41.066 +07:00 [INF] Route matched with {action = "CreateCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]] CreateCarModel(car_booking_service.Application.Models.Requests.CarModelRequests.CreateCarModelRequest) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 13:18:41.256 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 13:18:41.263 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 13:18:41.266 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service) in 200.0178ms
+2025-02-04 13:18:41.267 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 13:18:41.267 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/CarModels - 201 null application/json; charset=utf-8 204.3007ms
+2025-02-04 13:18:46.375 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/Booking - application/json 174
+2025-02-04 13:18:46.375 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 13:18:46.378 +07:00 [INF] Route matched with {action = "CreateBooking", controller = "Booking"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse]] CreateBooking(car_booking_service.Application.Models.Requests.BookingRequests.CreateBookingRequest) on controller car_booking_service.Controllers.BookingController (car-booking-service).
+2025-02-04 13:18:46.449 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 13:18:46.452 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.BookingResponses.BookingResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 13:18:46.455 +07:00 [INF] Executed action car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service) in 77.0235ms
+2025-02-04 13:18:46.455 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.BookingController.CreateBooking (car-booking-service)'
+2025-02-04 13:18:46.455 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/Booking - 201 null application/json; charset=utf-8 80.3787ms
+2025-02-04 13:18:49.595 +07:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - null null
+2025-02-04 13:18:49.596 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 13:18:49.596 +07:00 [INF] Route matched with {action = "DeleteCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteCarModel(Int32) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 13:18:49.708 +07:00 [ERR] Failed Delete Car Model Data with id : 1, Error occurred while delete the CarModel
+System.ArgumentException: Error occurred while delete the CarModel
+ ---> System.InvalidOperationException: The association between entity types 'CarModel' and 'Booking' has been severed, but the relationship is either marked as required or is implicitly required because the foreign key is not nullable. If the dependent/child entity should be deleted when a required relationship is severed, configure the relationship to use cascade deletes. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the key values.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.HandleConceptualNulls(Boolean sensitiveLoggingEnabled, Boolean force, Boolean isCascadeDelete)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.CascadeDelete(InternalEntityEntry entry, Boolean force, IEnumerable`1 foreignKeys)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState oldState, EntityState newState, Boolean acceptChanges, Boolean modifyProperties)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.SetEntityState(EntityState entityState, Boolean acceptChanges, Boolean modifyProperties, Nullable`1 forceStateWhenUnknownKey, Nullable`1 fallbackState)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.EntityEntry.set_State(EntityState value)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Remove(TEntity entity)
+   at car_booking_service.Infrastructure.Repositories.GenericRepository`1.DeleteAsync(T entity) in D:\Belajar\Car-Booking-Service\car-booking-service.Infrastructure\Repositories\GenericRepository.cs:line 97
+   --- End of inner exception stack trace ---
+   at car_booking_service.Infrastructure.Repositories.GenericRepository`1.DeleteAsync(T entity) in D:\Belajar\Car-Booking-Service\car-booking-service.Infrastructure\Repositories\GenericRepository.cs:line 104
+   at car_booking_service.Application.Services.Implementations.CarModelService.DeleteCarModelAsync(Int32 id) in D:\Belajar\Car-Booking-Service\car-booking-service.Application\Services\Implementations\CarModelService.cs:line 69
+   at car_booking_service.Controllers.CarModelsController.DeleteCarModel(Int32 carId) in D:\Belajar\Car-Booking-Service\car-booking-service\Controllers\CarModelController.cs:line 259
+2025-02-04 13:18:49.709 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 13:18:49.709 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service) in 112.9612ms
+2025-02-04 13:18:49.709 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.DeleteCarModel (car-booking-service)'
+2025-02-04 13:18:49.709 +07:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7125/api/CarModels/1 - 500 null application/json; charset=utf-8 114.9418ms
+2025-02-04 14:53:15.383 +07:00 [INF] Now listening on: https://localhost:7125
+2025-02-04 14:53:15.404 +07:00 [INF] Now listening on: http://localhost:5276
+2025-02-04 14:53:15.481 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-04 14:53:15.482 +07:00 [INF] Hosting environment: Development
+2025-02-04 14:53:15.482 +07:00 [INF] Content root path: D:\Belajar\Car-Booking-Service\car-booking-service
+2025-02-04 14:53:15.824 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-02-04 14:53:15.983 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 163.8296ms
+2025-02-04 14:53:15.988 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-04 14:53:15.988 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-02-04 14:53:15.994 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 6.7752ms
+2025-02-04 14:53:16.022 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.1586ms
+2025-02-04 14:53:16.048 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-02-04 14:53:16.068 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.0379ms
+2025-02-04 14:53:24.988 +07:00 [INF] Request starting HTTP/1.1 POST https://localhost:7125/api/CarModels - application/json 111
+2025-02-04 14:53:24.994 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 14:53:25.012 +07:00 [INF] Route matched with {action = "CreateCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]] CreateCarModel(car_booking_service.Application.Models.Requests.CarModelRequests.CreateCarModelRequest) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 14:53:25.930 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 14:53:25.941 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 14:53:25.954 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service) in 939.8326ms
+2025-02-04 14:53:25.954 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.CreateCarModel (car-booking-service)'
+2025-02-04 14:53:25.956 +07:00 [INF] Request finished HTTP/1.1 POST https://localhost:7125/api/CarModels - 201 null application/json; charset=utf-8 968.1332ms
+2025-02-04 14:53:46.655 +07:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7125/api/CarModels - application/json 175
+2025-02-04 14:53:46.657 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.UpdateCarModel (car-booking-service)'
+2025-02-04 14:53:46.662 +07:00 [INF] Route matched with {action = "UpdateCarModel", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]] UpdateCarModel(car_booking_service.Application.Models.Requests.CarModelRequests.UpdateCarModelRequest) on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-02-04 14:53:46.853 +07:00 [INF] Saved 1 entities to in-memory store.
+2025-02-04 14:53:46.853 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-02-04 14:53:46.853 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.UpdateCarModel (car-booking-service) in 190.8393ms
+2025-02-04 14:53:46.853 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.UpdateCarModel (car-booking-service)'
+2025-02-04 14:53:46.854 +07:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7125/api/CarModels - 200 null application/json; charset=utf-8 198.9569ms

@@ -1,0 +1,12 @@
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain\bin\Debug\net8.0\hyundai-testDriveBooking-service.Domain.deps.json
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain\bin\Debug\net8.0\hyundai-testDriveBooking-service.Domain.dll
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain\bin\Debug\net8.0\hyundai-testDriveBooking-service.Domain.pdb
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain\obj\Debug\net8.0\hyundai-testDriveBooking-service.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain\obj\Debug\net8.0\hyundai-testDriveBooking-service.Domain.AssemblyInfoInputs.cache
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain\obj\Debug\net8.0\hyundai-testDriveBooking-service.Domain.AssemblyInfo.cs
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain\obj\Debug\net8.0\hyundai-testDriveBooking-service.Domain.csproj.CoreCompileInputs.cache
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain\obj\Debug\net8.0\hyundai-testDriveBooking-service.Domain.sourcelink.json
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain\obj\Debug\net8.0\hyundai-testDriveBooking-service.Domain.dll
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain\obj\Debug\net8.0\refint\hyundai-testDriveBooking-service.Domain.dll
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain\obj\Debug\net8.0\hyundai-testDriveBooking-service.Domain.pdb
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain\obj\Debug\net8.0\ref\hyundai-testDriveBooking-service.Domain.dll

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ZLaWnqRoh4YsYJw/blROqcyDav4oRdiVS/yC3VT/fK0=",
+  "Source": "car-booking-service",
+  "BasePath": "_content/car-booking-service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
