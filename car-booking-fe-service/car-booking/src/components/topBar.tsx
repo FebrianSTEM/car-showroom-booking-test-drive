@@ -37,8 +37,8 @@ const TopBar: React.FC = () => {
 
   // ✅ Check if user is logged in and get roles
   const roles: string[] = JSON.parse(localStorage.getItem('roles') || '[]');
-  const isLoggedIn = !!roles;
-  console.log('isLoggedin', isLoggedIn);
+  const isLoggedIn = Array.isArray(roles) && roles.length > 0;
+  console.log('isLoggedin', !isLoggedIn);
   const hasBookingAccess = isLoggedIn && roles?.includes('Admin');
 
   return (
