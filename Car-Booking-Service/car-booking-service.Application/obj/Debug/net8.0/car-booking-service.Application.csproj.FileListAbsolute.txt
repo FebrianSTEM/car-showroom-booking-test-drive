@@ -1,0 +1,32 @@
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\bin\Debug\net8.0\car-booking-service.Application.deps.json
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\bin\Debug\net8.0\car-booking-service.Application.dll
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\bin\Debug\net8.0\car-booking-service.Application.pdb
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\bin\Debug\net8.0\car-booking-service.Domain.dll
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\bin\Debug\net8.0\car-booking-service.Domain.pdb
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.csproj.AssemblyReference.cache
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.AssemblyInfoInputs.cache
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.AssemblyInfo.cs
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.csproj.CoreCompileInputs.cache
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.sourcelink.json
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-book.6F9C30AA.Up2Date
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.dll
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\refint\car-booking-service.Application.dll
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.pdb
+D:\Belajar\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\ref\car-booking-service.Application.dll
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\bin\Debug\net8.0\car-booking-service.Application.deps.json
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\bin\Debug\net8.0\car-booking-service.Application.dll
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\bin\Debug\net8.0\car-booking-service.Application.pdb
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\bin\Debug\net8.0\car-booking-service.Domain.dll
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\bin\Debug\net8.0\car-booking-service.Domain.pdb
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.csproj.AssemblyReference.cache
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.AssemblyInfoInputs.cache
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.AssemblyInfo.cs
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.csproj.CoreCompileInputs.cache
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.sourcelink.json
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-book.6F9C30AA.Up2Date
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.dll
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\refint\car-booking-service.Application.dll
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\car-booking-service.Application.pdb
+D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Application\obj\Debug\net8.0\ref\car-booking-service.Application.dll

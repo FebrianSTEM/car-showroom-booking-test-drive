@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\App.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\components\\RegistrationPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\RegistrationPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\components\\LoginPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\LoginPage.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\api\\auth\\authApiConnector.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\api\\auth\\authApiConnector.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\request\\auth\\loginRequest.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\models\\request\\auth\\loginRequest.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\request\\auth\\userRoleRequest.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\models\\request\\auth\\userRoleRequest.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\request\\auth\\roleResponse.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\models\\request\\auth\\roleResponse.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\request\\auth\\registerUserRequest.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\models\\request\\auth\\registerUserRequest.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\standardResponse.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\models\\standardResponse.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.tsx",
+              "DocumentMoniker": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\App.tsx",
+              "RelativeDocumentMoniker": "src\\App.tsx",
+              "ToolTip": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\App.tsx*",
+              "RelativeToolTip": "src\\App.tsx*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-05T08:13:04.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegistrationPage.tsx",
+              "DocumentMoniker": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\components\\RegistrationPage.tsx",
+              "RelativeDocumentMoniker": "src\\components\\RegistrationPage.tsx",
+              "ToolTip": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\components\\RegistrationPage.tsx",
+              "RelativeToolTip": "src\\components\\RegistrationPage.tsx",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAlwIwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-05T08:09:09.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginPage.tsx",
+              "DocumentMoniker": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\components\\LoginPage.tsx",
+              "RelativeDocumentMoniker": "src\\components\\LoginPage.tsx",
+              "ToolTip": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\components\\LoginPage.tsx",
+              "RelativeToolTip": "src\\components\\LoginPage.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-05T08:09:07.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "userRoleRequest.ts",
+              "DocumentMoniker": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\request\\auth\\userRoleRequest.ts",
+              "RelativeDocumentMoniker": "src\\models\\request\\auth\\userRoleRequest.ts",
+              "ToolTip": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\request\\auth\\userRoleRequest.ts",
+              "RelativeToolTip": "src\\models\\request\\auth\\userRoleRequest.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-05T08:07:54.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "roleResponse.ts",
+              "DocumentMoniker": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\request\\auth\\roleResponse.ts",
+              "RelativeDocumentMoniker": "src\\models\\request\\auth\\roleResponse.ts",
+              "ToolTip": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\request\\auth\\roleResponse.ts",
+              "RelativeToolTip": "src\\models\\request\\auth\\roleResponse.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-05T08:07:54.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "registerUserRequest.ts",
+              "DocumentMoniker": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\request\\auth\\registerUserRequest.ts",
+              "RelativeDocumentMoniker": "src\\models\\request\\auth\\registerUserRequest.ts",
+              "ToolTip": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\request\\auth\\registerUserRequest.ts",
+              "RelativeToolTip": "src\\models\\request\\auth\\registerUserRequest.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-05T08:07:52.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "loginRequest.ts",
+              "DocumentMoniker": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\request\\auth\\loginRequest.ts",
+              "RelativeDocumentMoniker": "src\\models\\request\\auth\\loginRequest.ts",
+              "ToolTip": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\request\\auth\\loginRequest.ts",
+              "RelativeToolTip": "src\\models\\request\\auth\\loginRequest.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-05T08:07:51.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "standardResponse.ts",
+              "DocumentMoniker": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\standardResponse.ts",
+              "RelativeDocumentMoniker": "src\\models\\standardResponse.ts",
+              "ToolTip": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\models\\standardResponse.ts",
+              "RelativeToolTip": "src\\models\\standardResponse.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-05T08:07:48.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "authApiConnector.ts",
+              "DocumentMoniker": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\api\\auth\\authApiConnector.ts",
+              "RelativeDocumentMoniker": "src\\api\\auth\\authApiConnector.ts",
+              "ToolTip": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\car-booking-fe-service\\car-booking\\src\\api\\auth\\authApiConnector.ts",
+              "RelativeToolTip": "src\\api\\auth\\authApiConnector.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-04-05T07:52:43.892Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

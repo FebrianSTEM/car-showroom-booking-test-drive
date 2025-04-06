@@ -1,0 +1,15 @@
+/user-service/.vs
+/user-service/bin
+/user-service/obj
+/user-service.Application/bin
+/user-service.Application/obj
+/user-service.Domain/bin
+/user-service.Domain/obj
+/user-service.Infrastructure/bin
+/user-service.Infrastructure/obj
+/user-service.Test/bin
+/user-service.Test/obj
+/user-service.Infrastructure/bin/
+/user-service.Infrastructure/obj/
+/user-service/Logs
+/.vs/

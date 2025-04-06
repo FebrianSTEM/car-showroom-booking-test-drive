@@ -1,0 +1,16 @@
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\bin\Debug\net8.0\hyundai-testDriveBooking-service.Infrastructure.deps.json
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\bin\Debug\net8.0\hyundai-testDriveBooking-service.Infrastructure.dll
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\bin\Debug\net8.0\hyundai-testDriveBooking-service.Infrastructure.pdb
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\bin\Debug\net8.0\hyundai-testDriveBooking-service.Domain.dll
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\bin\Debug\net8.0\hyundai-testDriveBooking-service.Domain.pdb
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\obj\Debug\net8.0\hyundai-testDriveBooking-service.Infrastructure.csproj.AssemblyReference.cache
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\obj\Debug\net8.0\hyundai-testDriveBooking-service.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\obj\Debug\net8.0\hyundai-testDriveBooking-service.Infrastructure.AssemblyInfoInputs.cache
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\obj\Debug\net8.0\hyundai-testDriveBooking-service.Infrastructure.AssemblyInfo.cs
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\obj\Debug\net8.0\hyundai-testDriveBooking-service.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\obj\Debug\net8.0\hyundai-testDriveBooking-service.Infrastructure.sourcelink.json
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\obj\Debug\net8.0\hyundai-.8B9B3459.Up2Date
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\obj\Debug\net8.0\hyundai-testDriveBooking-service.Infrastructure.dll
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\obj\Debug\net8.0\refint\hyundai-testDriveBooking-service.Infrastructure.dll
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\obj\Debug\net8.0\hyundai-testDriveBooking-service.Infrastructure.pdb
+D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service.Domain.Infrastructure\obj\Debug\net8.0\ref\hyundai-testDriveBooking-service.Infrastructure.dll

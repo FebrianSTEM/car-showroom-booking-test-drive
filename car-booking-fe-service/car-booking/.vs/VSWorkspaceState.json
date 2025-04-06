@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\api",
+    "\\src\\api\\auth",
+    "\\src\\components",
+    "\\src\\models",
+    "\\src\\models\\request",
+    "\\src\\models\\request\\auth"
+  ],
+  "SelectedNode": "\\src\\App.tsx",
+  "PreviewInSolutionExplorer": false
+}

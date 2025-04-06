@@ -1,0 +1,298 @@
+2025-04-05 06:10:15.745 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:10:15.748 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/api/CarModels - 401 null null 3.4101ms
+2025-04-05 06:14:08.508 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:14:08.517 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 401 null null 9.0539ms
+2025-04-05 06:14:52.901 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:14:52.913 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/auth/validate
+2025-04-05 06:14:52.915 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/auth/validate
+2025-04-05 06:14:52.957 +07:00 [INF] Received HTTP response headers after 39.5646ms - 404
+2025-04-05 06:14:52.957 +07:00 [INF] End processing HTTP request after 47.8164ms - 404
+2025-04-05 06:14:52.957 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 401 null null 56.0519ms
+2025-04-05 06:14:54.773 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:14:54.773 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/auth/validate
+2025-04-05 06:14:54.773 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/auth/validate
+2025-04-05 06:14:54.776 +07:00 [INF] Received HTTP response headers after 2.1462ms - 404
+2025-04-05 06:14:54.776 +07:00 [INF] End processing HTTP request after 2.3923ms - 404
+2025-04-05 06:14:54.776 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 401 null null 3.1312ms
+2025-04-05 06:15:34.791 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:15:34.793 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/auth/validate
+2025-04-05 06:15:34.793 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/auth/validate
+2025-04-05 06:15:34.799 +07:00 [INF] Received HTTP response headers after 5.7189ms - 404
+2025-04-05 06:15:34.799 +07:00 [INF] End processing HTTP request after 6.4975ms - 404
+2025-04-05 06:15:34.800 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 401 null null 8.5211ms
+2025-04-05 06:16:27.192 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:16:27.195 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/auth/validate
+2025-04-05 06:16:27.195 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/auth/validate
+2025-04-05 06:16:27.214 +07:00 [INF] Received HTTP response headers after 18.1127ms - 404
+2025-04-05 06:16:27.214 +07:00 [INF] End processing HTTP request after 18.4501ms - 404
+2025-04-05 06:16:27.214 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 401 null null 22.3629ms
+2025-04-05 06:17:06.094 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:20:25.171 +07:00 [INF] User profile is available. Using 'C:\Users\MSI SHOP ID\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-05 06:20:25.508 +07:00 [INF] Now listening on: https://localhost:7126
+2025-04-05 06:20:25.509 +07:00 [INF] Now listening on: http://localhost:5277
+2025-04-05 06:20:25.582 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-05 06:20:25.583 +07:00 [INF] Hosting environment: Development
+2025-04-05 06:20:25.583 +07:00 [INF] Content root path: D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service
+2025-04-05 06:20:26.229 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/index.html - null null
+2025-04-05 06:20:26.385 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/index.html - 200 null text/html;charset=utf-8 160.5156ms
+2025-04-05 06:20:26.390 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-05 06:20:26.394 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 4.3852ms
+2025-04-05 06:20:26.402 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_vs/browserLink - null null
+2025-04-05 06:20:26.434 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.966ms
+2025-04-05 06:20:26.533 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - null null
+2025-04-05 06:20:26.551 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.1578ms
+2025-04-05 06:20:38.788 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:20:40.901 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:20:40.903 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:20:40.924 +07:00 [INF] Received HTTP response headers after 19.1339ms - 200
+2025-04-05 06:20:40.924 +07:00 [INF] End processing HTTP request after 27.8683ms - 200
+2025-04-05 06:20:44.714 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 500 null application/json; charset=utf-8 5926.1656ms
+2025-04-05 06:21:18.944 +07:00 [INF] Now listening on: https://localhost:7126
+2025-04-05 06:21:18.967 +07:00 [INF] Now listening on: http://localhost:5277
+2025-04-05 06:21:19.049 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-05 06:21:19.050 +07:00 [INF] Hosting environment: Development
+2025-04-05 06:21:19.050 +07:00 [INF] Content root path: D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service
+2025-04-05 06:21:19.669 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/index.html - null null
+2025-04-05 06:21:19.846 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/index.html - 200 null text/html;charset=utf-8 183.1641ms
+2025-04-05 06:21:19.851 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-05 06:21:19.857 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 6.8912ms
+2025-04-05 06:21:19.865 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_vs/browserLink - null null
+2025-04-05 06:21:19.896 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.431ms
+2025-04-05 06:21:19.927 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - null null
+2025-04-05 06:21:19.952 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.9672ms
+2025-04-05 06:22:37.118 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:22:43.315 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:22:43.317 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:22:43.350 +07:00 [INF] Received HTTP response headers after 30.574ms - 200
+2025-04-05 06:22:43.351 +07:00 [INF] End processing HTTP request after 40.1801ms - 200
+2025-04-05 06:22:44.903 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 06:22:44.917 +07:00 [INF] Route matched with {action = "GetAllCarModels", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]]] GetAllCarModels() on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-04-05 06:22:55.333 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-05 06:22:55.354 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service) in 10434.3202ms
+2025-04-05 06:22:55.355 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 06:22:55.358 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 200 null application/json; charset=utf-8 18240.6305ms
+2025-04-05 06:23:14.247 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:23:38.243 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:23:38.249 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:23:38.259 +07:00 [INF] Received HTTP response headers after 8.575ms - 200
+2025-04-05 06:23:38.259 +07:00 [INF] End processing HTTP request after 15.8802ms - 200
+2025-04-05 06:23:38.260 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 06:23:38.260 +07:00 [INF] Route matched with {action = "GetAllCarModels", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]]] GetAllCarModels() on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-04-05 06:23:39.041 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-05 06:23:39.042 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service) in 781.4302ms
+2025-04-05 06:23:39.042 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 06:23:39.042 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 200 null application/json; charset=utf-8 24794.4789ms
+2025-04-05 06:26:35.884 +07:00 [INF] Now listening on: https://localhost:7126
+2025-04-05 06:26:35.915 +07:00 [INF] Now listening on: http://localhost:5277
+2025-04-05 06:26:36.008 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-05 06:26:36.009 +07:00 [INF] Hosting environment: Development
+2025-04-05 06:26:36.009 +07:00 [INF] Content root path: D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service
+2025-04-05 06:26:36.151 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/index.html - null null
+2025-04-05 06:26:36.308 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/index.html - 200 null text/html;charset=utf-8 163.9347ms
+2025-04-05 06:26:36.312 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-05 06:26:36.315 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 3.9333ms
+2025-04-05 06:26:36.324 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_vs/browserLink - null null
+2025-04-05 06:26:36.357 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.6028ms
+2025-04-05 06:26:36.392 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - null null
+2025-04-05 06:26:36.406 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.6904ms
+2025-04-05 06:26:46.100 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:26:47.869 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:26:47.871 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:26:47.895 +07:00 [INF] Received HTTP response headers after 21.9229ms - 200
+2025-04-05 06:26:47.895 +07:00 [INF] End processing HTTP request after 32.0053ms - 200
+2025-04-05 06:26:47.898 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 06:26:47.914 +07:00 [INF] Route matched with {action = "GetAllCarModels", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]]] GetAllCarModels() on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-04-05 06:26:49.245 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-05 06:26:49.262 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service) in 1346.0195ms
+2025-04-05 06:26:49.262 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 06:26:49.265 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 200 null application/json; charset=utf-8 3164.7146ms
+2025-04-05 06:27:09.791 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:27:16.930 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 401 null application/json; charset=utf-8 7138.8418ms
+2025-04-05 06:27:37.608 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:27:39.824 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:27:39.824 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:27:39.834 +07:00 [INF] Received HTTP response headers after 9.2157ms - 200
+2025-04-05 06:27:39.834 +07:00 [INF] End processing HTTP request after 9.5862ms - 200
+2025-04-05 06:27:39.834 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 06:27:39.835 +07:00 [INF] Route matched with {action = "GetAllCarModels", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]]] GetAllCarModels() on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-04-05 06:27:40.566 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-05 06:27:40.567 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service) in 731.9937ms
+2025-04-05 06:27:40.567 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 06:27:40.567 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 200 null application/json; charset=utf-8 2958.9109ms
+2025-04-05 06:34:23.294 +07:00 [INF] Now listening on: https://localhost:7126
+2025-04-05 06:34:23.317 +07:00 [INF] Now listening on: http://localhost:5277
+2025-04-05 06:34:23.393 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-05 06:34:23.393 +07:00 [INF] Hosting environment: Development
+2025-04-05 06:34:23.393 +07:00 [INF] Content root path: D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service
+2025-04-05 06:34:23.979 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/index.html - null null
+2025-04-05 06:34:24.139 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/index.html - 200 null text/html;charset=utf-8 168.6296ms
+2025-04-05 06:34:24.145 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-05 06:34:24.149 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 4.2166ms
+2025-04-05 06:34:24.160 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_vs/browserLink - null null
+2025-04-05 06:34:24.190 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.1946ms
+2025-04-05 06:34:24.221 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - null null
+2025-04-05 06:34:24.241 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.603ms
+2025-04-05 06:34:39.508 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:34:46.787 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 06:34:46.808 +07:00 [INF] Route matched with {action = "GetAllCarModels", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]]] GetAllCarModels() on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-04-05 06:34:48.997 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-05 06:34:49.018 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service) in 2207.2509ms
+2025-04-05 06:34:49.019 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 06:34:49.021 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 200 null application/json; charset=utf-8 9513.609ms
+2025-04-05 06:34:56.324 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:38:37.187 +07:00 [INF] Now listening on: https://localhost:7126
+2025-04-05 06:38:37.210 +07:00 [INF] Now listening on: http://localhost:5277
+2025-04-05 06:38:37.300 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-05 06:38:37.300 +07:00 [INF] Hosting environment: Development
+2025-04-05 06:38:37.301 +07:00 [INF] Content root path: D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service
+2025-04-05 06:38:37.610 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/index.html - null null
+2025-04-05 06:38:37.773 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/index.html - 200 null text/html;charset=utf-8 167.8501ms
+2025-04-05 06:38:37.778 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-05 06:38:37.783 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 5.5891ms
+2025-04-05 06:38:37.791 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_vs/browserLink - null null
+2025-04-05 06:38:37.820 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.5539ms
+2025-04-05 06:38:37.854 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - null null
+2025-04-05 06:38:37.870 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.0684ms
+2025-04-05 06:38:42.793 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:39:04.927 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:39:04.930 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:39:04.969 +07:00 [INF] Received HTTP response headers after 36.705ms - 200
+2025-04-05 06:39:04.969 +07:00 [INF] End processing HTTP request after 49.9311ms - 200
+2025-04-05 06:39:13.029 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 500 null application/json; charset=utf-8 30236.0536ms
+2025-04-05 06:39:34.440 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:39:42.625 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:39:42.625 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:39:42.646 +07:00 [INF] Received HTTP response headers after 20.6038ms - 200
+2025-04-05 06:39:42.646 +07:00 [INF] End processing HTTP request after 21.0297ms - 200
+2025-04-05 06:39:44.423 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 500 null application/json; charset=utf-8 9983.0756ms
+2025-04-05 06:39:57.374 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:39:59.041 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:39:59.041 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:39:59.043 +07:00 [INF] Received HTTP response headers after 2.4267ms - 200
+2025-04-05 06:39:59.043 +07:00 [INF] End processing HTTP request after 2.8963ms - 200
+2025-04-05 06:50:02.305 +07:00 [INF] Now listening on: https://localhost:7126
+2025-04-05 06:50:02.326 +07:00 [INF] Now listening on: http://localhost:5277
+2025-04-05 06:50:02.407 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-05 06:50:02.407 +07:00 [INF] Hosting environment: Development
+2025-04-05 06:50:02.407 +07:00 [INF] Content root path: D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service
+2025-04-05 06:50:02.853 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/index.html - null null
+2025-04-05 06:50:03.027 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/index.html - 200 null text/html;charset=utf-8 179.2498ms
+2025-04-05 06:50:03.031 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-05 06:50:03.037 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 6.1306ms
+2025-04-05 06:50:03.046 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_vs/browserLink - null null
+2025-04-05 06:50:03.078 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.217ms
+2025-04-05 06:50:03.113 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - null null
+2025-04-05 06:50:03.132 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.6634ms
+2025-04-05 06:50:06.386 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:50:13.658 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:50:13.660 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:50:13.956 +07:00 [INF] Received HTTP response headers after 294.5679ms - 404
+2025-04-05 06:50:13.956 +07:00 [INF] End processing HTTP request after 302.8948ms - 404
+2025-04-05 06:50:25.137 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 401 null application/json; charset=utf-8 18751.0883ms
+2025-04-05 06:50:34.833 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:50:48.985 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:50:48.985 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:50:49.092 +07:00 [INF] Received HTTP response headers after 106.1322ms - 404
+2025-04-05 06:50:49.092 +07:00 [INF] End processing HTTP request after 106.5831ms - 404
+2025-04-05 06:52:51.715 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 401 null application/json; charset=utf-8 136881.3816ms
+2025-04-05 06:52:51.725 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:52:57.190 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:52:57.190 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:52:57.220 +07:00 [INF] Received HTTP response headers after 29.9897ms - 200
+2025-04-05 06:52:57.220 +07:00 [INF] End processing HTTP request after 30.2918ms - 200
+2025-04-05 06:53:19.258 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|User)
+2025-04-05 06:53:19.304 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 500 null application/json; charset=utf-8 27580.5442ms
+2025-04-05 06:53:41.592 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:53:50.709 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:53:50.709 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:53:50.723 +07:00 [INF] Received HTTP response headers after 13.2431ms - 200
+2025-04-05 06:53:50.723 +07:00 [INF] End processing HTTP request after 13.6559ms - 200
+2025-04-05 06:55:47.009 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 403 null application/json; charset=utf-8 125417.1423ms
+2025-04-05 06:55:47.941 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/index.html - null null
+2025-04-05 06:55:47.949 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/index.html - 200 null text/html;charset=utf-8 7.6232ms
+2025-04-05 06:55:47.963 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_vs/browserLink - null null
+2025-04-05 06:55:47.963 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-05 06:55:47.964 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 1.4477ms
+2025-04-05 06:55:47.980 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.2777ms
+2025-04-05 06:55:48.031 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - null null
+2025-04-05 06:55:48.049 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.8225ms
+2025-04-05 06:55:51.966 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:55:53.324 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:55:53.324 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:55:53.339 +07:00 [INF] Received HTTP response headers after 14.6106ms - 200
+2025-04-05 06:55:53.339 +07:00 [INF] End processing HTTP request after 14.8888ms - 200
+2025-04-05 06:55:54.245 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 403 null application/json; charset=utf-8 2279.7008ms
+2025-04-05 06:55:58.451 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:56:05.476 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:56:05.476 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:56:05.480 +07:00 [INF] Received HTTP response headers after 3.7342ms - 200
+2025-04-05 06:56:05.505 +07:00 [INF] End processing HTTP request after 29.2058ms - 200
+2025-04-05 06:56:24.714 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|User)
+2025-04-05 06:56:24.764 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 500 null application/json; charset=utf-8 26312.3697ms
+2025-04-05 06:56:25.723 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/index.html - null null
+2025-04-05 06:56:25.726 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/index.html - 200 null text/html;charset=utf-8 3.4056ms
+2025-04-05 06:56:25.738 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_vs/browserLink - null null
+2025-04-05 06:56:25.742 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-05 06:56:25.743 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 1.0979ms
+2025-04-05 06:56:25.755 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.8394ms
+2025-04-05 06:56:25.823 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - null null
+2025-04-05 06:56:25.833 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.911ms
+2025-04-05 06:57:58.426 +07:00 [INF] Now listening on: https://localhost:7126
+2025-04-05 06:57:58.449 +07:00 [INF] Now listening on: http://localhost:5277
+2025-04-05 06:57:58.529 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-05 06:57:58.529 +07:00 [INF] Hosting environment: Development
+2025-04-05 06:57:58.530 +07:00 [INF] Content root path: D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service
+2025-04-05 06:57:59.125 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/index.html - null null
+2025-04-05 06:57:59.284 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/index.html - 200 null text/html;charset=utf-8 167.4706ms
+2025-04-05 06:57:59.293 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-05 06:57:59.298 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 4.5197ms
+2025-04-05 06:57:59.306 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_vs/browserLink - null null
+2025-04-05 06:57:59.333 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.6653ms
+2025-04-05 06:57:59.367 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - null null
+2025-04-05 06:57:59.387 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.1046ms
+2025-04-05 06:58:02.983 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 06:58:04.748 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:58:04.751 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 06:58:04.787 +07:00 [INF] Received HTTP response headers after 33.4009ms - 200
+2025-04-05 06:58:04.788 +07:00 [INF] End processing HTTP request after 44.876ms - 200
+2025-04-05 06:58:05.827 +07:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|User)
+2025-04-05 06:58:05.878 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 500 null application/json; charset=utf-8 2895.0329ms
+2025-04-05 07:01:19.556 +07:00 [INF] User profile is available. Using 'C:\Users\MSI SHOP ID\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-05 07:01:19.751 +07:00 [INF] Now listening on: https://localhost:7126
+2025-04-05 07:01:19.751 +07:00 [INF] Now listening on: http://localhost:5277
+2025-04-05 07:01:19.827 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-05 07:01:19.827 +07:00 [INF] Hosting environment: Development
+2025-04-05 07:01:19.827 +07:00 [INF] Content root path: D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service
+2025-04-05 07:01:20.758 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/index.html - null null
+2025-04-05 07:01:20.935 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/index.html - 200 null text/html;charset=utf-8 184.7758ms
+2025-04-05 07:01:20.943 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-05 07:01:20.948 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 4.5974ms
+2025-04-05 07:01:20.955 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/_vs/browserLink - null null
+2025-04-05 07:01:20.986 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.0319ms
+2025-04-05 07:01:21.019 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - null null
+2025-04-05 07:01:21.043 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7126/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 24.3261ms
+2025-04-05 07:01:24.077 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 07:01:26.542 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 07:01:26.545 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 07:01:26.617 +07:00 [INF] Received HTTP response headers after 69.6932ms - 200
+2025-04-05 07:01:26.618 +07:00 [INF] End processing HTTP request after 80.1249ms - 200
+2025-04-05 07:01:27.962 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 07:01:27.976 +07:00 [INF] Route matched with {action = "GetAllCarModels", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]]] GetAllCarModels() on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-04-05 07:01:30.646 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-05 07:01:30.666 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service) in 2687.3229ms
+2025-04-05 07:01:30.666 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 07:01:30.670 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 200 null application/json; charset=utf-8 6592.9454ms
+2025-04-05 07:01:55.117 +07:00 [INF] Request starting HTTP/1.1 GET https://localhost:7126/api/CarModels - null null
+2025-04-05 07:02:05.898 +07:00 [INF] Start processing HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 07:02:05.898 +07:00 [INF] Sending HTTP request GET https://localhost:7125/api/Account/me
+2025-04-05 07:02:05.912 +07:00 [INF] Received HTTP response headers after 13.7389ms - 200
+2025-04-05 07:02:05.912 +07:00 [INF] End processing HTTP request after 14.0887ms - 200
+2025-04-05 07:02:06.585 +07:00 [INF] Executing endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 07:02:06.585 +07:00 [INF] Route matched with {action = "GetAllCarModels", controller = "CarModels"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse]]] GetAllCarModels() on controller car_booking_service.Controllers.CarModelsController (car-booking-service).
+2025-04-05 07:02:07.295 +07:00 [INF] Executing ObjectResult, writing value of type 'car_booking_service.Domain.Common.StandardResponse`1[[System.Collections.Generic.IEnumerable`1[[car_booking_service.Application.Models.Responses.CarModelResponses.CarModelResponse, car-booking-service.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-05 07:02:07.295 +07:00 [INF] Executed action car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service) in 710.0748ms
+2025-04-05 07:02:07.295 +07:00 [INF] Executed endpoint 'car_booking_service.Controllers.CarModelsController.GetAllCarModels (car-booking-service)'
+2025-04-05 07:02:07.296 +07:00 [INF] Request finished HTTP/1.1 GET https://localhost:7126/api/CarModels - 200 null application/json; charset=utf-8 12178.8942ms

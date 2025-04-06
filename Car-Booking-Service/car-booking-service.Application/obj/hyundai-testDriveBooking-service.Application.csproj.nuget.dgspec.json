@@ -1,0 +1,152 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Belajar\\dotnet-test-843\\hyundai-testDriveBooking-service\\hyundai-testDriveBooking-service.Application\\hyundai-testDriveBooking-service.Application.csproj": {}
+  },
+  "projects": {
+    "D:\\Belajar\\dotnet-test-843\\hyundai-testDriveBooking-service\\hyundai-testDriveBooking-service.Application\\hyundai-testDriveBooking-service.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Belajar\\dotnet-test-843\\hyundai-testDriveBooking-service\\hyundai-testDriveBooking-service.Application\\hyundai-testDriveBooking-service.Application.csproj",
+        "projectName": "hyundai-testDriveBooking-service.Application",
+        "projectPath": "D:\\Belajar\\dotnet-test-843\\hyundai-testDriveBooking-service\\hyundai-testDriveBooking-service.Application\\hyundai-testDriveBooking-service.Application.csproj",
+        "packagesPath": "C:\\Users\\MSI SHOP ID\\.nuget\\packages\\",
+        "outputPath": "D:\\Belajar\\dotnet-test-843\\hyundai-testDriveBooking-service\\hyundai-testDriveBooking-service.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MSI SHOP ID\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Belajar\\dotnet-test-843\\hyundai-testDriveBooking-service\\hyundai-testDriveBooking-service.Domain\\hyundai-testDriveBooking-service.Domain.csproj": {
+                "projectPath": "D:\\Belajar\\dotnet-test-843\\hyundai-testDriveBooking-service\\hyundai-testDriveBooking-service.Domain\\hyundai-testDriveBooking-service.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Belajar\\dotnet-test-843\\hyundai-testDriveBooking-service\\hyundai-testDriveBooking-service.Domain\\hyundai-testDriveBooking-service.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Belajar\\dotnet-test-843\\hyundai-testDriveBooking-service\\hyundai-testDriveBooking-service.Domain\\hyundai-testDriveBooking-service.Domain.csproj",
+        "projectName": "hyundai-testDriveBooking-service.Domain",
+        "projectPath": "D:\\Belajar\\dotnet-test-843\\hyundai-testDriveBooking-service\\hyundai-testDriveBooking-service.Domain\\hyundai-testDriveBooking-service.Domain.csproj",
+        "packagesPath": "C:\\Users\\MSI SHOP ID\\.nuget\\packages\\",
+        "outputPath": "D:\\Belajar\\dotnet-test-843\\hyundai-testDriveBooking-service\\hyundai-testDriveBooking-service.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\MSI SHOP ID\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

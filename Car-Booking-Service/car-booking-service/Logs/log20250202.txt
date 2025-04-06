@@ -1,0 +1,13 @@
+2025-02-02 01:55:27.420 +07:00 [INF] Now listening on: https://localhost:7125
+2025-02-02 01:55:27.443 +07:00 [INF] Now listening on: http://localhost:5276
+2025-02-02 01:55:27.522 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-02-02 01:55:27.522 +07:00 [INF] Hosting environment: Development
+2025-02-02 01:55:27.522 +07:00 [INF] Content root path: D:\Belajar\Car-Booking-Service\car-booking-service
+2025-02-02 01:55:28.211 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-02-02 01:55:28.392 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 188.6999ms
+2025-02-02 01:55:28.395 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-02-02 01:55:28.395 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-02-02 01:55:28.400 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13774 application/javascript; charset=utf-8 4.9421ms
+2025-02-02 01:55:28.436 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.9154ms
+2025-02-02 01:55:28.598 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-02-02 01:55:28.638 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.9726ms

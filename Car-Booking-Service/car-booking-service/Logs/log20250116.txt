@@ -1,0 +1,130 @@
+2025-01-16 17:36:38.919 +07:00 [INF] Now listening on: https://localhost:7125
+2025-01-16 17:36:38.944 +07:00 [INF] Now listening on: http://localhost:5276
+2025-01-16 17:36:39.020 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-16 17:36:39.021 +07:00 [INF] Hosting environment: Development
+2025-01-16 17:36:39.021 +07:00 [INF] Content root path: D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service
+2025-01-16 17:36:39.515 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-01-16 17:36:39.700 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-01-16 17:36:39.700 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-16 17:36:39.701 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 194.979ms
+2025-01-16 17:36:39.705 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 4.7776ms
+2025-01-16 17:36:39.746 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.9776ms
+2025-01-16 17:36:39.774 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-01-16 17:36:39.781 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Booking" for actions - hyundai_testDriveBooking_service.Controllers.BookingController.GetAllBooking (hyundai-testDriveBooking-service),hyundai_testDriveBooking_service.Controllers.BookingController.GetBookingById (hyundai-testDriveBooking-service). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-16 17:36:39.783 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 9.9845ms
+2025-01-16 17:37:45.736 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-01-16 17:37:45.744 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 8.0818ms
+2025-01-16 17:37:45.755 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-16 17:37:45.755 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-01-16 17:37:45.756 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 1.3469ms
+2025-01-16 17:37:45.768 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.032ms
+2025-01-16 17:37:46.058 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-01-16 17:37:46.061 +07:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Booking" for actions - hyundai_testDriveBooking_service.Controllers.BookingController.GetAllBooking (hyundai-testDriveBooking-service),hyundai_testDriveBooking_service.Controllers.BookingController.GetBookingById (hyundai-testDriveBooking-service). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-01-16 17:37:46.062 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 4.1316ms
+2025-01-16 17:37:58.507 +07:00 [INF] Now listening on: https://localhost:7125
+2025-01-16 17:37:58.556 +07:00 [INF] Now listening on: http://localhost:5276
+2025-01-16 17:37:58.707 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-16 17:37:58.709 +07:00 [INF] Hosting environment: Development
+2025-01-16 17:37:58.709 +07:00 [INF] Content root path: D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service
+2025-01-16 17:37:59.309 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-01-16 17:37:59.451 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 149.0859ms
+2025-01-16 17:37:59.455 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-01-16 17:37:59.455 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-16 17:37:59.460 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 4.8433ms
+2025-01-16 17:37:59.485 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.2265ms
+2025-01-16 17:37:59.513 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-01-16 17:37:59.525 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.8007ms
+2025-01-16 17:38:17.013 +07:00 [INF] Now listening on: https://localhost:7125
+2025-01-16 17:38:17.035 +07:00 [INF] Now listening on: http://localhost:5276
+2025-01-16 17:38:17.102 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-16 17:38:17.102 +07:00 [INF] Hosting environment: Development
+2025-01-16 17:38:17.103 +07:00 [INF] Content root path: D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service
+2025-01-16 17:38:17.538 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-01-16 17:38:17.671 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 138.9994ms
+2025-01-16 17:38:17.675 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-16 17:38:17.675 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-01-16 17:38:17.681 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 6.5209ms
+2025-01-16 17:38:17.708 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.2949ms
+2025-01-16 17:38:17.735 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-01-16 17:38:17.746 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.7903ms
+2025-01-16 17:38:57.405 +07:00 [INF] Now listening on: https://localhost:7125
+2025-01-16 17:38:57.427 +07:00 [INF] Now listening on: http://localhost:5276
+2025-01-16 17:38:57.507 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-16 17:38:57.507 +07:00 [INF] Hosting environment: Development
+2025-01-16 17:38:57.507 +07:00 [INF] Content root path: D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service
+2025-01-16 17:38:57.817 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-01-16 17:38:57.965 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 153.6846ms
+2025-01-16 17:38:57.969 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-16 17:38:57.969 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-01-16 17:38:57.974 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 4.9858ms
+2025-01-16 17:38:58.000 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.1779ms
+2025-01-16 17:38:58.027 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-01-16 17:38:58.039 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.2425ms
+2025-01-16 17:39:52.797 +07:00 [INF] Now listening on: https://localhost:7125
+2025-01-16 17:39:52.818 +07:00 [INF] Now listening on: http://localhost:5276
+2025-01-16 17:39:52.892 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-16 17:39:52.893 +07:00 [INF] Hosting environment: Development
+2025-01-16 17:39:52.893 +07:00 [INF] Content root path: D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service
+2025-01-16 17:39:53.242 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-01-16 17:39:53.373 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 137.1394ms
+2025-01-16 17:39:53.379 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-16 17:39:53.379 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-01-16 17:39:53.389 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 10.743ms
+2025-01-16 17:39:53.422 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.6177ms
+2025-01-16 17:39:53.452 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-01-16 17:39:53.464 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.5745ms
+2025-01-16 17:43:51.950 +07:00 [INF] Now listening on: https://localhost:7125
+2025-01-16 17:43:51.972 +07:00 [INF] Now listening on: http://localhost:5276
+2025-01-16 17:43:52.044 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-16 17:43:52.044 +07:00 [INF] Hosting environment: Development
+2025-01-16 17:43:52.044 +07:00 [INF] Content root path: D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service
+2025-01-16 17:43:52.280 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-01-16 17:43:52.415 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 140.1269ms
+2025-01-16 17:43:52.419 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-16 17:43:52.419 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-01-16 17:43:52.423 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 4.5118ms
+2025-01-16 17:43:52.451 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.0461ms
+2025-01-16 17:43:52.479 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-01-16 17:43:52.492 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.4229ms
+2025-01-16 17:50:53.838 +07:00 [INF] Now listening on: https://localhost:7125
+2025-01-16 17:50:53.859 +07:00 [INF] Now listening on: http://localhost:5276
+2025-01-16 17:50:53.949 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-16 17:50:53.949 +07:00 [INF] Hosting environment: Development
+2025-01-16 17:50:53.949 +07:00 [INF] Content root path: D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service
+2025-01-16 17:50:54.466 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-01-16 17:50:54.785 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 331.3577ms
+2025-01-16 17:50:54.786 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-01-16 17:50:54.786 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-16 17:50:54.800 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 14.2736ms
+2025-01-16 17:50:54.858 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.6582ms
+2025-01-16 17:50:54.918 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-01-16 17:50:54.960 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.4626ms
+2025-01-16 17:57:36.984 +07:00 [INF] Now listening on: https://localhost:7125
+2025-01-16 17:57:37.004 +07:00 [INF] Now listening on: http://localhost:5276
+2025-01-16 17:57:37.090 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-01-16 17:57:37.090 +07:00 [INF] Hosting environment: Development
+2025-01-16 17:57:37.090 +07:00 [INF] Content root path: D:\Belajar\dotnet-test-843\hyundai-testDriveBooking-service\hyundai-testDriveBooking-service
+2025-01-16 17:57:37.553 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/index.html - null null
+2025-01-16 17:57:37.708 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/index.html - 200 null text/html;charset=utf-8 159.7545ms
+2025-01-16 17:57:37.712 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - null null
+2025-01-16 17:57:37.712 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/_vs/browserLink - null null
+2025-01-16 17:57:37.716 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_framework/aspnetcore-browser-refresh.js - 200 13800 application/javascript; charset=utf-8 4.7313ms
+2025-01-16 17:57:37.745 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.8082ms
+2025-01-16 17:57:37.771 +07:00 [INF] Request starting HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - null null
+2025-01-16 17:57:37.789 +07:00 [INF] Request finished HTTP/2 GET https://localhost:7125/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.5114ms
