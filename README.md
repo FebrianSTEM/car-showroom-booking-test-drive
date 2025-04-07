@@ -126,7 +126,49 @@ Dalam rangka mempermudah pengetesan, pada saat service berjalan akan otomatis me
 
 
 # How to Run
-Untuk bagaimana cara setup dan running services bisa me reffer pada tautan berikut:
-1. user-service : 
+Untuk bagaimana cara setup dan running services bisa mengacu pada penjelasan berikut:
+1. user-service :
+   - [Setup](https://github.com/FebrianSTEM/car-showroom-booking-test-drive/blob/main/user-service/SETUP.md)
+   - [Documentation](https://github.com/FebrianSTEM/car-showroom-booking-test-drive/blob/main/user-service/DOCUMENTATION.md)
 2. car-booking-service : 
+   - [Setup](https://github.com/FebrianSTEM/car-showroom-booking-test-drive/blob/main/Car-Booking-Service/SETUP.md)
+   - [Documentation](https://github.com/FebrianSTEM/car-showroom-booking-test-drive/blob/main/Car-Booking-Service/DOCUMENTATION.md)
 3. car-booking-fe-service : 
+   - Pastikan Backend Service telah berjalan
+   - change directory ke car-booking-fe-service/car-booking
+   - kemudian running dengan mengetikkan command berikut pada terminal : npm run dev
+   - Apabila sudah muncul tampilan seperti dibawah ini maka anda bisa mengakses UI di alamat local : http://localhost:5173/ (address akan bervariasi bergantung dengan ketersedian port)
+    ``` bash
+     VITE v6.2.5  ready in 192 ms
+      ➜  Local:   http://localhost:5173/
+      ➜  Network: use --host to expose
+      ➜  press h + enter to show help
+    ```
+    - Apabila ada penyesuaian pada port backend maka harap mengubah pada 
+      car-booking-fe-service/car-booking/vite.config.ts sperti berikut
+    ``` json
+
+        import { defineConfig } from 'vite'
+        import react from '@vitejs/plugin-react-swc'
+        
+        // https://vite.dev/config/
+        export default defineConfig({
+          plugins: [react()],
+            server: {
+              proxy: {
+                '/auth': {
+                  target: 'https://localhost:7125', //port harap disesuaikan
+                  changeOrigin: true,
+                  rewrite: (path) => path.replace(/^\/auth/, '/api'),
+                  secure: false,
+                },
+                '/carBooking': {
+                  target: 'https://localhost:7126', //port harap disesuaikan
+                  changeOrigin: true,
+                  rewrite: (path) => path.replace(/^\/carBooking/, '/api'),
+                  secure: false,
+                },
+              },
+            }
+        })
+    ```
