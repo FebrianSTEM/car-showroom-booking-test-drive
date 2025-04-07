@@ -62,7 +62,7 @@ Before running the .NET 8 project, ensure you have the following installed on yo
 3. Run the project:
    - Click the green **Start** button or press `F5` to run the application in Debug mode.
    - Alternatively, press `Ctrl + F5` to run the application without debugging.
-4. Visual Studio will launch the application and open the default browser at the application URL http://localhost:5276/swagger or https://localhost:7125/swagger
+4. Visual Studio will launch the application and open the default browser at the application URL http://localhost:5276/swagger or https://localhost:7126/swagger
 
 #### From the Command Line
 - Run the project in development mode:
@@ -72,7 +72,7 @@ Before running the .NET 8 project, ensure you have the following installed on yo
 
 ### 6. Access the Application
 - Open a browser and navigate to the URL specified in the terminal or Visual Studio output (e.g., `https://localhost:5001`).
-URL http://localhost:5276/swagger or https://localhost:7125/swagger
+URL http://localhost:5277/swagger or https://localhost:7126/swagger
 ---
 
 ### 7. Logging
