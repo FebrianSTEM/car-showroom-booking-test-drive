@@ -233,7 +233,7 @@ const CarListPage: React.FC = () => {
                   image_url: newCar.image_url,
                   description: newCar.description,
                 });
-            
+                console.log('API Create Car', res);
                 const successMessage = res?.data.message || 'Car created successfully!';
                 toast.success(successMessage);
             
@@ -249,6 +249,10 @@ const CarListPage: React.FC = () => {
                 fetchCars(); // refresh list
               } catch (err: any) {
                 const errorMessage = err?.response?.data?.message || 'Failed to create car';
+                if(errorMessage === 'Invalid or expired token.'){
+                  localStorage.removeItem('roles');
+                  localStorage.removeItem('token');
+                }
                 toast.error(errorMessage);
                 console.error('Failed to create car:', err);
               }

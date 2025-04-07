@@ -21,6 +21,12 @@ import bookingApiConnector from '../api/booking/bookingApiConnector';
 import { toast } from 'react-toastify';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { TextField } from '@mui/material';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 
 const CarDetailPage: React.FC = () => {
@@ -142,8 +148,10 @@ const CarDetailPage: React.FC = () => {
       const bookingReq = 
       {
         car_id : car.car_id,
-        booking_date_time: bookingStart.toISOString()
+        start_booking_date: dayjs(bookingStart).tz('Asia/Jakarta').format('YYYY-MM-DDTHH:mm:ss'),
+        end_booking_date: dayjs(bookingEnd).tz('Asia/Jakarta').format('YYYY-MM-DDTHH:mm:ss'),
       };
+
       console.log(bookingReq);
       const response = await bookingApiConnector.createBooking(bookingReq);
   
@@ -184,7 +192,7 @@ const CarDetailPage: React.FC = () => {
           </Button><Button variant="contained" color="error" onClick={handleDeleteClick}>
               Delete
             </Button></>
-           )}
+        )}
             <Button variant="outlined" color="secondary" onClick={handleBookingClick}>
             Booking for Test Drive
             </Button>
