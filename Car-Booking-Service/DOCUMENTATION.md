@@ -14,9 +14,11 @@
       "data": object or array of returned data,
       "message": "string"
     }
+    ```
     
-    //and this for paginated one
+    And this for paginated responses:
 
+    ```json
     {
       "status": "string",
       "code": integer,
@@ -27,6 +29,7 @@
       "total_data": integer,
       "total_pages": integer
     }
+    ```
 
 ---
 
@@ -40,7 +43,7 @@ Retrieve all bookings.
 - **Responses:**
   - `200 OK`: List of bookings retrieved.
     ```json
-      {
+    {
       "status": "string",
       "code": 0,
       "data": [
@@ -50,14 +53,14 @@ Retrieve all bookings.
           "car_model_brand": "string",
           "car_model_name": "string",
           "car_model_year": 0,
-          "booking_date_time": "2025-01-16T19:04:32.347Z",
-          "customer_name": "string",
+          "start_booking_date": "2025-04-07T00:00:00Z",
+          "end_booking_date": "2025-04-07T00:00:00Z",
           "customer_email": "string",
           "customer_phone": "string",
           "created_by": "string",
-          "created_at": "2025-01-16T19:04:32.347Z",
+          "created_at": "2025-04-07T00:00:00Z",
           "updated_by": "string",
-          "updated_at": "2025-01-16T19:04:32.347Z"
+          "updated_at": "2025-04-07T00:00:00Z"
         }
       ],
       "message": "string"
@@ -81,18 +84,19 @@ Retrieve a specific booking by ID.
         "car_model_brand": "string",
         "car_model_name": "string",
         "car_model_year": 2022,
-        "booking_date_time": "2023-01-01T00:00:00Z",
-        "customer_name": "string",
+        "start_booking_date": "2025-04-07T00:00:00Z",
+        "end_booking_date": "2025-04-07T00:00:00Z",
         "customer_email": "string",
         "customer_phone": "string",
         "created_by": "string",
-        "created_at": "2023-01-01T00:00:00Z",
+        "created_at": "2025-04-07T00:00:00Z",
         "updated_by": "string",
-        "updated_at": "2023-01-01T00:00:00Z"
+        "updated_at": "2025-04-07T00:00:00Z"
       },
       "message": "string"
     }
     ```
+
 #### **GET** `/api/Booking/list`
 Retrieve a filtered list of bookings.
 
@@ -112,29 +116,32 @@ Retrieve a filtered list of bookings.
     {
       "status": "string",
       "code": 200,
-      "data": {
-        "booking_id": 1,
-        "car_id": 2,
-        "car_model_brand": "string",
-        "car_model_name": "string",
-        "car_model_year": 2022,
-        "booking_date_time": "2023-01-01T00:00:00Z",
-        "customer_name": "string",
-        "customer_email": "string",
-        "customer_phone": "string",
-        "created_by": "string",
-        "created_at": "2023-01-01T00:00:00Z",
-        "updated_by": "string",
-        "updated_at": "2023-01-01T00:00:00Z"
-      },
+      "data": [
+        {
+          "booking_id": 1,
+          "car_id": 2,
+          "car_model_brand": "string",
+          "car_model_name": "string",
+          "car_model_year": 2022,
+          "start_booking_date": "2025-04-07T00:00:00Z",
+          "end_booking_date": "2025-04-07T00:00:00Z",
+          "customer_email": "string",
+          "customer_phone": "string",
+          "created_by": "string",
+          "created_at": "2025-04-07T00:00:00Z",
+          "updated_by": "string",
+          "updated_at": "2025-04-07T00:00:00Z"
+        }
+      ],
       "message": "string"
     }
     ```
-#### **GET** `/api/Booking/list`
-Retrieve a filtered list of bookings.
+
+#### **GET** `/api/Booking/paging`
+Retrieve a paginated and filtered list of bookings.
 
 - **Query Parameters:**
-  - `page` (integer, required): n page to be shown of all total pages.
+  - `page` (integer, required): Page number to be shown.
   - `page_size` (integer, required): Amount of data to retrieve in one page.
   - `start_date` (string, required): Start date filter (ISO 8601 format).
   - `end_date` (string, required): End date filter (ISO 8601 format).
@@ -146,7 +153,7 @@ Retrieve a filtered list of bookings.
   - `car_model` (string, optional): Car model filter.
   - `car_year` (integer, optional): Car year filter.
 - **Responses:**
-  - `200 OK`: Filtered bookings retrieved successfully.
+  - `200 OK`: Paginated bookings retrieved successfully.
     ```json
     {
       "status": "string",
@@ -158,14 +165,14 @@ Retrieve a filtered list of bookings.
           "car_model_brand": "string",
           "car_model_name": "string",
           "car_model_year": 0,
-          "booking_date_time": "2025-01-17T03:28:06.461Z",
-          "customer_name": "string",
+          "start_booking_date": "2025-04-07T00:00:00Z",
+          "end_booking_date": "2025-04-07T00:00:00Z",
           "customer_email": "string",
           "customer_phone": "string",
           "created_by": "string",
-          "created_at": "2025-01-17T03:28:06.461Z",
+          "created_at": "2025-04-07T00:00:00Z",
           "updated_by": "string",
-          "updated_at": "2025-01-17T03:28:06.461Z"
+          "updated_at": "2025-04-07T00:00:00Z"
         }
       ],
       "message": "string",
@@ -176,7 +183,6 @@ Retrieve a filtered list of bookings.
     }
     ```
 
-
 #### **POST** `/api/Booking`
 Create a new booking.
 
@@ -184,35 +190,31 @@ Create a new booking.
   ```json
   {
     "car_id": 1,
-    "customer_name": "string",
-    "customer_phone": "string",
-    "customer_email": "string",
-    "booking_date_time": "2023-01-01T00:00:00Z"
+    "start_booking_date": "2025-04-07T00:00:00Z",
+    "end_booking_date": "2025-04-07T00:00:00Z"
   }
   ```
 - **Responses:**
   - `201 Created`: Booking created successfully.
     ```json
-      {
+    {
       "status": "string",
       "code": 0,
-      "data": [
-        {
-          "booking_id": 0,
-          "car_id": 0,
-          "car_model_brand": "string",
-          "car_model_name": "string",
-          "car_model_year": 0,
-          "booking_date_time": "2025-01-16T19:04:32.347Z",
-          "customer_name": "string",
-          "customer_email": "string",
-          "customer_phone": "string",
-          "created_by": "string",
-          "created_at": "2025-01-16T19:04:32.347Z",
-          "updated_by": "string",
-          "updated_at": "2025-01-16T19:04:32.347Z"
-        }
-      ],
+      "data": {
+        "booking_id": 0,
+        "car_id": 0,
+        "car_model_brand": "string",
+        "car_model_name": "string",
+        "car_model_year": 0,
+        "start_booking_date": "2025-04-07T00:00:00Z",
+        "end_booking_date": "2025-04-07T00:00:00Z",
+        "customer_email": "string",
+        "customer_phone": "string",
+        "created_by": "string",
+        "created_at": "2025-04-07T00:00:00Z",
+        "updated_by": "string",
+        "updated_at": "2025-04-07T00:00:00Z"
+      },
       "message": "string"
     }
     ```
@@ -225,39 +227,34 @@ Update an existing booking.
   {
     "booking_id": 1,
     "car_id": 2,
-    "customer_name": "string",
-    "customer_phone": "string",
-    "customer_email": "string",
-    "booking_date_time": "2023-01-01T00:00:00Z"
+    "start_booking_date": "2025-04-07T00:00:00Z",
+    "end_booking_date": "2025-04-07T00:00:00Z"
   }
   ```
 - **Responses:**
   - `200 OK`: Booking updated successfully.
     ```json
-      {
+    {
       "status": "string",
       "code": 0,
-      "data": [
-        {
-          "booking_id": 0,
-          "car_id": 0,
-          "car_model_brand": "string",
-          "car_model_name": "string",
-          "car_model_year": 0,
-          "booking_date_time": "2025-01-16T19:04:32.347Z",
-          "customer_name": "string",
-          "customer_email": "string",
-          "customer_phone": "string",
-          "created_by": "string",
-          "created_at": "2025-01-16T19:04:32.347Z",
-          "updated_by": "string",
-          "updated_at": "2025-01-16T19:04:32.347Z"
-        }
-      ],
+      "data": {
+        "booking_id": 0,
+        "car_id": 0,
+        "car_model_brand": "string",
+        "car_model_name": "string",
+        "car_model_year": 0,
+        "start_booking_date": "2025-04-07T00:00:00Z",
+        "end_booking_date": "2025-04-07T00:00:00Z",
+        "customer_email": "string",
+        "customer_phone": "string",
+        "created_by": "string",
+        "created_at": "2025-04-07T00:00:00Z",
+        "updated_by": "string",
+        "updated_at": "2025-04-07T00:00:00Z"
+      },
       "message": "string"
     }
     ```
-
 
 #### **DELETE** `/api/Booking/{bookingId}`
 Delete a booking by ID.
@@ -266,6 +263,28 @@ Delete a booking by ID.
   - `booking_id` (integer, required): The ID of the booking.
 - **Responses:**
   - `204 No Content`: Booking deleted successfully.
+    ```json
+    {
+      "status": "string",
+      "code": 0,
+      "data": {
+        "booking_id": 0,
+        "car_id": 0,
+        "car_model_brand": "string",
+        "car_model_name": "string",
+        "car_model_year": 0,
+        "start_booking_date": "2025-04-07T00:00:00Z",
+        "end_booking_date": "2025-04-07T00:00:00Z",
+        "customer_email": "string",
+        "customer_phone": "string",
+        "created_by": "string",
+        "created_at": "2025-04-07T00:00:00Z",
+        "updated_by": "string",
+        "updated_at": "2025-04-07T00:00:00Z"
+      },
+      "message": "string"
+    }
+    ```
 
 ---
 
@@ -277,28 +296,27 @@ Retrieve all car models.
 - **Responses:**
   - `200 OK`: List of car models retrieved.
   ```json
-    {
-      "status": "string",
-      "code": 0,
-      "data": [
-        {
-          "car_id": 0,
-          "brand": "string",
-          "model": "string",
-          "year": 0,
-          "image_url": "string",
-          "description": "string",
-          "is_available_for_test_drive": true,
-          "created_by": "string",
-          "created_at": "2025-01-16T19:12:22.340Z",
-          "updated_by": "string",
-          "updated_at": "2025-01-16T19:12:22.340Z"
-        }
-      ],
-      "message": "string"
-    }
-    ```
-    
+  {
+    "status": "string",
+    "code": 0,
+    "data": [
+      {
+        "car_id": 0,
+        "brand": "string",
+        "model": "string",
+        "year": 0,
+        "image_url": "string",
+        "description": "string",
+        "is_available_for_test_drive": true,
+        "created_by": "string",
+        "created_at": "2025-04-07T00:00:00Z",
+        "updated_by": "string",
+        "updated_at": "2025-04-07T00:00:00Z"
+      }
+    ],
+    "message": "string"
+  }
+  ```
 
 #### **GET** `/api/CarModels/list`
 Retrieve a filtered list of car models.
@@ -312,67 +330,67 @@ Retrieve a filtered list of car models.
 - **Responses:**
   - `200 OK`: Filtered car models retrieved successfully.
   ```json
-    {
-      "status": "string",
-      "code": 0,
-      "data": [
-        {
-          "car_id": 0,
-          "brand": "string",
-          "model": "string",
-          "year": 0,
-          "image_url": "string",
-          "description": "string",
-          "is_available_for_test_drive": true,
-          "created_by": "string",
-          "created_at": "2025-01-16T19:12:22.340Z",
-          "updated_by": "string",
-          "updated_at": "2025-01-16T19:12:22.340Z"
-        }
-      ],
-      "message": "string"
-    }
-    ```
+  {
+    "status": "string",
+    "code": 0,
+    "data": [
+      {
+        "car_id": 0,
+        "brand": "string",
+        "model": "string",
+        "year": 0,
+        "image_url": "string",
+        "description": "string",
+        "is_available_for_test_drive": true,
+        "created_by": "string",
+        "created_at": "2025-04-07T00:00:00Z",
+        "updated_by": "string",
+        "updated_at": "2025-04-07T00:00:00Z"
+      }
+    ],
+    "message": "string"
+  }
+  ```
   
 #### **GET** `/api/CarModels/paging`
-Retrieve a filtered list of car models.
+Retrieve a paginated and filtered list of car models.
 
 - **Query Parameters:**
-  - `page` (integer, required): n Page of total page.
-  - `page_size` (integer, required): Amount of data show in one page.
+  - `page` (integer, required): Page number to be shown.
+  - `page_size` (integer, required): Amount of data to show in one page.
   - `brand` (string, optional): Car brand filter.
   - `model` (string, optional): Car model filter.
   - `year` (integer, optional): Car year filter.
   - `description` (string, optional): Description filter.
   - `is_available` (boolean, optional): Availability filter.
 - **Responses:**
-  - `200 OK`: Filtered car models retrieved successfully.
+  - `200 OK`: Paginated car models retrieved successfully.
   ```json
+  {
+    "status": "string",
+    "code": 0,
+    "data": [
       {
-        "status": "string",
-        "code": 0,
-        "data": [
-          {
-            "car_id": 0,
-            "brand": "string",
-            "model": "string",
-            "year": 0,
-            "image_url": "string",
-            "description": "string",
-            "is_available_for_test_drive": true,
-            "created_by": "string",
-            "created_at": "2025-01-17T03:28:06.468Z",
-            "updated_by": "string",
-            "updated_at": "2025-01-17T03:28:06.468Z"
-          }
-        ],
-        "message": "string",
-        "page_index": 0,
-        "page_size": 0,
-        "total_data": 0,
-        "total_pages": 0
+        "car_id": 0,
+        "brand": "string",
+        "model": "string",
+        "year": 0,
+        "image_url": "string",
+        "description": "string",
+        "is_available_for_test_drive": true,
+        "created_by": "string",
+        "created_at": "2025-04-07T00:00:00Z",
+        "updated_by": "string",
+        "updated_at": "2025-04-07T00:00:00Z"
       }
-    ```
+    ],
+    "message": "string",
+    "page_index": 0,
+    "page_size": 0,
+    "total_data": 0,
+    "total_pages": 0
+  }
+  ```
 
 #### **GET** `/api/CarModels/{carId}`
 Retrieve a specific car model by ID.
@@ -382,25 +400,25 @@ Retrieve a specific car model by ID.
 - **Responses:**
   - `200 OK`: Car model retrieved successfully.
   ```json
-    {
-      "status": "string",
-      "code": 0,
-      "data": {
-        "car_id": 0,
-        "brand": "string",
-        "model": "string",
-        "year": 0,
-        "image_url": "string",
-        "description": "string",
-        "is_available_for_test_drive": true,
-        "created_by": "string",
-        "created_at": "2025-01-16T19:14:21.060Z",
-        "updated_by": "string",
-        "updated_at": "2025-01-16T19:14:21.060Z"
-      },
-      "message": "string"
-    }
-    ```
+  {
+    "status": "string",
+    "code": 0,
+    "data": {
+      "car_id": 0,
+      "brand": "string",
+      "model": "string",
+      "year": 0,
+      "image_url": "string",
+      "description": "string",
+      "is_available_for_test_drive": true,
+      "created_by": "string",
+      "created_at": "2025-04-07T00:00:00Z",
+      "updated_by": "string",
+      "updated_at": "2025-04-07T00:00:00Z"
+    },
+    "message": "string"
+  }
+  ```
 
 #### **POST** `/api/CarModels`
 Create a new car model.
@@ -418,25 +436,25 @@ Create a new car model.
 - **Responses:**
   - `201 Created`: Car model created successfully.
   ```json
-    {
-      "status": "string",
-      "code": 0,
-      "data": {
-        "car_id": 0,
-        "brand": "string",
-        "model": "string",
-        "year": 0,
-        "image_url": "string",
-        "description": "string",
-        "is_available_for_test_drive": true,
-        "created_by": "string",
-        "created_at": "2025-01-16T19:14:21.060Z",
-        "updated_by": "string",
-        "updated_at": "2025-01-16T19:14:21.060Z"
-      },
-      "message": "string"
-    }
-    ```
+  {
+    "status": "string",
+    "code": 0,
+    "data": {
+      "car_id": 0,
+      "brand": "string",
+      "model": "string",
+      "year": 0,
+      "image_url": "string",
+      "description": "string",
+      "is_available_for_test_drive": true,
+      "created_by": "string",
+      "created_at": "2025-04-07T00:00:00Z",
+      "updated_by": "string",
+      "updated_at": "2025-04-07T00:00:00Z"
+    },
+    "message": "string"
+  }
+  ```
 
 #### **PUT** `/api/CarModels`
 Update an existing car model.
@@ -455,6 +473,26 @@ Update an existing car model.
   ```
 - **Responses:**
   - `200 OK`: Car model updated successfully.
+  ```json
+  {
+    "status": "string",
+    "code": 0,
+    "data": {
+      "car_id": 0,
+      "brand": "string",
+      "model": "string",
+      "year": 0,
+      "image_url": "string",
+      "description": "string",
+      "is_available_for_test_drive": true,
+      "created_by": "string",
+      "created_at": "2025-04-07T00:00:00Z",
+      "updated_by": "string",
+      "updated_at": "2025-04-07T00:00:00Z"
+    },
+    "message": "string"
+  }
+  ```
 
 #### **DELETE** `/api/CarModels/{carId}`
 Delete a car model by ID.
@@ -463,4 +501,24 @@ Delete a car model by ID.
   - `car_id` (integer, required): The ID of the car model.
 - **Responses:**
   - `204 No Content`: Car model deleted successfully.
+  ```json
+  {
+    "status": "string",
+    "code": 0,
+    "data": {
+      "car_id": 0,
+      "brand": "string",
+      "model": "string",
+      "year": 0,
+      "image_url": "string",
+      "description": "string",
+      "is_available_for_test_drive": true,
+      "created_by": "string",
+      "created_at": "2025-04-07T00:00:00Z",
+      "updated_by": "string",
+      "updated_at": "2025-04-07T00:00:00Z"
+    },
+    "message": "string"
+  }
+  ```
 ---

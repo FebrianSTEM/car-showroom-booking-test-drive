@@ -1,466 +1,259 @@
-# Car Booking Service API Documentation
+# User Service API Documentation
 
 ## Overview
 
 - **Base URL:** `/api`
+- **Authentication:** JWT Bearer token
 - **Common Response Structure**
 
-     All responses follow this structure:
+  All responses follow this structure:
 
-    ```json
-    {
-      "status": "string",
-      "code": integer,
-      "data": object or array of returned data,
-      "message": "string"
-    }
-    
-    //and this for paginated one
-
-    {
-      "status": "string",
-      "code": integer,
-      "data": object or array of returned data,
-      "message": "string",
-      "page_index": integer,
-      "page_size": integer,
-      "total_data": integer,
-      "total_pages": integer
-    }
+  ```json
+  {
+    "status": "string",
+    "code": integer,
+    "data": object or array of returned data,
+    "message": "string"
+  }
+  ```
 
 ---
 
 ## Endpoints
 
-### 1. Booking
+### 1. Account
 
-#### **GET** `/api/Booking`
-Retrieve all bookings.
+#### **POST** `/api/Account/register`
+Register a new user account.
 
+- **Request Body:**
+  ```json
+  {
+    "email": "string",
+    "phone_number": "string",
+    "password": "string",
+    "roles": ["string"]
+  }
+  ```
 - **Responses:**
-  - `200 OK`: List of bookings retrieved.
+  - `201 Created`: User account created successfully.
     ```json
-      {
+    {
       "status": "string",
-      "code": 0,
-      "data": [
-        {
-          "booking_id": 0,
-          "car_id": 0,
-          "car_model_brand": "string",
-          "car_model_name": "string",
-          "car_model_year": 0,
-          "booking_date_time": "2025-01-16T19:04:32.347Z",
-          "customer_name": "string",
-          "customer_email": "string",
-          "customer_phone": "string",
-          "created_by": "string",
-          "created_at": "2025-01-16T19:04:32.347Z",
-          "updated_by": "string",
-          "updated_at": "2025-01-16T19:04:32.347Z"
-        }
-      ],
+      "code": 201,
+      "data": {
+        "id": "uuid",
+        "email": "string",
+        "phone_number": "string",
+        "email_confirmed": boolean,
+        "phone_number_confirmed": boolean,
+        "roles": ["string"],
+        "created_at": "2025-04-07T00:00:00Z"
+      },
       "message": "string"
     }
     ```
 
-#### **GET** `/api/Booking/{bookingId}`
-Retrieve a specific booking by ID.
+#### **POST** `/api/Account/login`
+Login to an existing account.
 
-- **Path Parameters:**
-  - `booking_id` (integer, required): The ID of the booking.
+- **Request Body:**
+  ```json
+  {
+    "email": "string",
+    "password": "string"
+  }
+  ```
 - **Responses:**
-  - `200 OK`: Booking retrieved successfully.
+  - `200 OK`: Login successful.
     ```json
     {
       "status": "string",
       "code": 200,
       "data": {
-        "booking_id": 1,
-        "car_id": 2,
-        "car_model_brand": "string",
-        "car_model_name": "string",
-        "car_model_year": 2022,
-        "booking_date_time": "2023-01-01T00:00:00Z",
-        "customer_name": "string",
-        "customer_email": "string",
-        "customer_phone": "string",
-        "created_by": "string",
-        "created_at": "2023-01-01T00:00:00Z",
-        "updated_by": "string",
-        "updated_at": "2023-01-01T00:00:00Z"
+        "token": "string",
+        "user": {
+          "id": "uuid",
+          "email": "string",
+          "phone_number": "string",
+          "email_confirmed": boolean,
+          "phone_number_confirmed": boolean,
+          "roles": ["string"],
+          "created_at": "2025-04-07T00:00:00Z"
+        }
       },
       "message": "string"
     }
     ```
-#### **GET** `/api/Booking/list`
-Retrieve a filtered list of bookings.
 
-- **Query Parameters:**
-  - `start_date` (string, required): Start date filter (ISO 8601 format).
-  - `end_date` (string, required): End date filter (ISO 8601 format).
-  - `customer_name` (string, optional): Customer name filter.
-  - `customer_phone` (string, optional): Customer phone filter.
-  - `customer_email` (string, optional): Customer email filter.
-  - `car_id` (integer, optional): Car ID filter.
-  - `car_brand` (string, optional): Car brand filter.
-  - `car_model` (string, optional): Car model filter.
-  - `car_year` (integer, optional): Car year filter.
+#### **GET** `/api/Account/me`
+Retrieve the current authenticated user's profile.
+
+- **Authorization:** Bearer token required
 - **Responses:**
-  - `200 OK`: Filtered bookings retrieved successfully.
+  - `200 OK`: User profile retrieved successfully.
     ```json
     {
       "status": "string",
       "code": 200,
       "data": {
-        "booking_id": 1,
-        "car_id": 2,
-        "car_model_brand": "string",
-        "car_model_name": "string",
-        "car_model_year": 2022,
-        "booking_date_time": "2023-01-01T00:00:00Z",
-        "customer_name": "string",
-        "customer_email": "string",
-        "customer_phone": "string",
-        "created_by": "string",
-        "created_at": "2023-01-01T00:00:00Z",
-        "updated_by": "string",
-        "updated_at": "2023-01-01T00:00:00Z"
+        "id": "uuid",
+        "email": "string",
+        "phone_number": "string",
+        "email_confirmed": boolean,
+        "phone_number_confirmed": boolean,
+        "roles": ["string"],
+        "created_at": "2025-04-07T00:00:00Z"
       },
       "message": "string"
     }
     ```
-#### **GET** `/api/Booking/list`
-Retrieve a filtered list of bookings.
+
+#### **POST** `/api/Account/confirm-email`
+Confirm a user's email address.
 
 - **Query Parameters:**
-  - `page` (integer, required): n page to be shown of all total pages.
-  - `page_size` (integer, required): Amount of data to retrieve in one page.
-  - `start_date` (string, required): Start date filter (ISO 8601 format).
-  - `end_date` (string, required): End date filter (ISO 8601 format).
-  - `customer_name` (string, optional): Customer name filter.
-  - `customer_phone` (string, optional): Customer phone filter.
-  - `customer_email` (string, optional): Customer email filter.
-  - `car_id` (integer, optional): Car ID filter.
-  - `car_brand` (string, optional): Car brand filter.
-  - `car_model` (string, optional): Car model filter.
-  - `car_year` (integer, optional): Car year filter.
+  - `user_id` (uuid, required): The ID of the user.
+  - `token` (string, required): The confirmation token.
 - **Responses:**
-  - `200 OK`: Filtered bookings retrieved successfully.
+  - `200 OK`: Email confirmed successfully.
     ```json
     {
       "status": "string",
-      "code": 0,
-      "data": [
-        {
-          "booking_id": 0,
-          "car_id": 0,
-          "car_model_brand": "string",
-          "car_model_name": "string",
-          "car_model_year": 0,
-          "booking_date_time": "2025-01-17T03:28:06.461Z",
-          "customer_name": "string",
-          "customer_email": "string",
-          "customer_phone": "string",
-          "created_by": "string",
-          "created_at": "2025-01-17T03:28:06.461Z",
-          "updated_by": "string",
-          "updated_at": "2025-01-17T03:28:06.461Z"
-        }
-      ],
-      "message": "string",
-      "page_index": 0,
-      "page_size": 0,
-      "total_data": 0,
-      "total_pages": 0
-    }
-    ```
-
-
-#### **POST** `/api/Booking`
-Create a new booking.
-
-- **Request Body:**
-  ```json
-  {
-    "car_id": 1,
-    "customer_name": "string",
-    "customer_phone": "string",
-    "customer_email": "string",
-    "booking_date_time": "2023-01-01T00:00:00Z"
-  }
-  ```
-- **Responses:**
-  - `201 Created`: Booking created successfully.
-    ```json
-      {
-      "status": "string",
-      "code": 0,
-      "data": [
-        {
-          "booking_id": 0,
-          "car_id": 0,
-          "car_model_brand": "string",
-          "car_model_name": "string",
-          "car_model_year": 0,
-          "booking_date_time": "2025-01-16T19:04:32.347Z",
-          "customer_name": "string",
-          "customer_email": "string",
-          "customer_phone": "string",
-          "created_by": "string",
-          "created_at": "2025-01-16T19:04:32.347Z",
-          "updated_by": "string",
-          "updated_at": "2025-01-16T19:04:32.347Z"
-        }
-      ],
+      "code": 200,
+      "data": boolean,
       "message": "string"
     }
     ```
 
-#### **PUT** `/api/Booking`
-Update an existing booking.
+#### **POST** `/api/Account/confirm-phone`
+Confirm a user's phone number.
 
-- **Request Body:**
-  ```json
-  {
-    "booking_id": 1,
-    "car_id": 2,
-    "customer_name": "string",
-    "customer_phone": "string",
-    "customer_email": "string",
-    "booking_date_time": "2023-01-01T00:00:00Z"
-  }
-  ```
+- **Query Parameters:**
+  - `user_id` (uuid, required): The ID of the user.
+  - `token` (string, required): The confirmation token.
 - **Responses:**
-  - `200 OK`: Booking updated successfully.
+  - `200 OK`: Phone number confirmed successfully.
     ```json
-      {
+    {
       "status": "string",
-      "code": 0,
-      "data": [
-        {
-          "booking_id": 0,
-          "car_id": 0,
-          "car_model_brand": "string",
-          "car_model_name": "string",
-          "car_model_year": 0,
-          "booking_date_time": "2025-01-16T19:04:32.347Z",
-          "customer_name": "string",
-          "customer_email": "string",
-          "customer_phone": "string",
-          "created_by": "string",
-          "created_at": "2025-01-16T19:04:32.347Z",
-          "updated_by": "string",
-          "updated_at": "2025-01-16T19:04:32.347Z"
-        }
-      ],
+      "code": 200,
+      "data": boolean,
       "message": "string"
     }
     ```
 
+#### **POST** `/api/Account/add-to-role`
+Add a user to a role.
 
-#### **DELETE** `/api/Booking/{bookingId}`
-Delete a booking by ID.
-
-- **Path Parameters:**
-  - `booking_id` (integer, required): The ID of the booking.
+- **Authorization:** Bearer token required
+- **Request Body:**
+  ```json
+  {
+    "user_id": "uuid",
+    "role_name": "string"
+  }
+  ```
 - **Responses:**
-  - `204 No Content`: Booking deleted successfully.
+  - `200 OK`: User added to role successfully.
+    ```json
+    {
+      "status": "string",
+      "code": 200,
+      "data": boolean,
+      "message": "string"
+    }
+    ```
+
+#### **POST** `/api/Account/remove-from-role`
+Remove a user from a role.
+
+- **Authorization:** Bearer token required
+- **Request Body:**
+  ```json
+  {
+    "user_id": "uuid",
+    "role_name": "string"
+  }
+  ```
+- **Responses:**
+  - `200 OK`: User removed from role successfully.
+    ```json
+    {
+      "status": "string",
+      "code": 200,
+      "data": boolean,
+      "message": "string"
+    }
+    ```
+
+#### **GET** `/api/Account/roles`
+Get roles for the current authenticated user.
+
+- **Authorization:** Bearer token required
+- **Responses:**
+  - `200 OK`: Roles retrieved successfully.
+    ```json
+    {
+      "status": "string",
+      "code": 200,
+      "data": ["string"],
+      "message": "string"
+    }
+    ```
 
 ---
 
-### 2. Car Models
+### 2. Roles
 
-#### **GET** `/api/CarModels`
-Retrieve all car models.
+#### **GET** `/api/Roles`
+Retrieve all available roles.
 
+- **Authorization:** Bearer token required
 - **Responses:**
-  - `200 OK`: List of car models retrieved.
-  ```json
+  - `200 OK`: Roles retrieved successfully.
+    ```json
     {
       "status": "string",
-      "code": 0,
+      "code": 200,
       "data": [
         {
-          "car_id": 0,
-          "brand": "string",
-          "model": "string",
-          "year": 0,
-          "image_url": "string",
-          "description": "string",
-          "is_available_for_test_drive": true,
-          "created_by": "string",
-          "created_at": "2025-01-16T19:12:22.340Z",
-          "updated_by": "string",
-          "updated_at": "2025-01-16T19:12:22.340Z"
+          "name": "string"
         }
       ],
       "message": "string"
     }
     ```
-    
 
-#### **GET** `/api/CarModels/list`
-Retrieve a filtered list of car models.
+#### **POST** `/api/Roles`
+Create a new role.
 
-- **Query Parameters:**
-  - `brand` (string, optional): Car brand filter.
-  - `model` (string, optional): Car model filter.
-  - `year` (integer, optional): Car year filter.
-  - `description` (string, optional): Description filter.
-  - `is_available` (boolean, optional): Availability filter.
-- **Responses:**
-  - `200 OK`: Filtered car models retrieved successfully.
-  ```json
-    {
-      "status": "string",
-      "code": 0,
-      "data": [
-        {
-          "car_id": 0,
-          "brand": "string",
-          "model": "string",
-          "year": 0,
-          "image_url": "string",
-          "description": "string",
-          "is_available_for_test_drive": true,
-          "created_by": "string",
-          "created_at": "2025-01-16T19:12:22.340Z",
-          "updated_by": "string",
-          "updated_at": "2025-01-16T19:12:22.340Z"
-        }
-      ],
-      "message": "string"
-    }
-    ```
-  
-#### **GET** `/api/CarModels/paging`
-Retrieve a filtered list of car models.
-
-- **Query Parameters:**
-  - `page` (integer, required): n Page of total page.
-  - `page_size` (integer, required): Amount of data show in one page.
-  - `brand` (string, optional): Car brand filter.
-  - `model` (string, optional): Car model filter.
-  - `year` (integer, optional): Car year filter.
-  - `description` (string, optional): Description filter.
-  - `is_available` (boolean, optional): Availability filter.
-- **Responses:**
-  - `200 OK`: Filtered car models retrieved successfully.
-  ```json
-      {
-        "status": "string",
-        "code": 0,
-        "data": [
-          {
-            "car_id": 0,
-            "brand": "string",
-            "model": "string",
-            "year": 0,
-            "image_url": "string",
-            "description": "string",
-            "is_available_for_test_drive": true,
-            "created_by": "string",
-            "created_at": "2025-01-17T03:28:06.468Z",
-            "updated_by": "string",
-            "updated_at": "2025-01-17T03:28:06.468Z"
-          }
-        ],
-        "message": "string",
-        "page_index": 0,
-        "page_size": 0,
-        "total_data": 0,
-        "total_pages": 0
-      }
-    ```
-
-#### **GET** `/api/CarModels/{carId}`
-Retrieve a specific car model by ID.
-
-- **Path Parameters:**
-  - `car_id` (integer, required): The ID of the car model.
-- **Responses:**
-  - `200 OK`: Car model retrieved successfully.
-  ```json
-    {
-      "status": "string",
-      "code": 0,
-      "data": {
-        "car_id": 0,
-        "brand": "string",
-        "model": "string",
-        "year": 0,
-        "image_url": "string",
-        "description": "string",
-        "is_available_for_test_drive": true,
-        "created_by": "string",
-        "created_at": "2025-01-16T19:14:21.060Z",
-        "updated_by": "string",
-        "updated_at": "2025-01-16T19:14:21.060Z"
-      },
-      "message": "string"
-    }
-    ```
-
-#### **POST** `/api/CarModels`
-Create a new car model.
-
+- **Authorization:** Bearer token required
 - **Request Body:**
   ```json
   {
-    "brand": "string",
-    "model": "string",
-    "year": 2022,
-    "image_url": "string",
-    "description": "string"
+    "name": "string"
   }
   ```
 - **Responses:**
-  - `201 Created`: Car model created successfully.
-  ```json
+  - `201 Created`: Role created successfully.
+    ```json
     {
       "status": "string",
-      "code": 0,
-      "data": {
-        "car_id": 0,
-        "brand": "string",
-        "model": "string",
-        "year": 0,
-        "image_url": "string",
-        "description": "string",
-        "is_available_for_test_drive": true,
-        "created_by": "string",
-        "created_at": "2025-01-16T19:14:21.060Z",
-        "updated_by": "string",
-        "updated_at": "2025-01-16T19:14:21.060Z"
-      },
+      "code": 201,
+      "data": boolean,
       "message": "string"
     }
     ```
 
-#### **PUT** `/api/CarModels`
-Update an existing car model.
-
-- **Request Body:**
-  ```json
-  {
-    "car_id": 1,
-    "brand": "string",
-    "model": "string",
-    "year": 2022,
-    "image_url": "string",
-    "description": "string",
-    "is_available_for_test_drive": true
-  }
-  ```
-- **Responses:**
-  - `200 OK`: Car model updated successfully.
-
-#### **DELETE** `/api/CarModels/{carId}`
-Delete a car model by ID.
-
-- **Path Parameters:**
-  - `car_id` (integer, required): The ID of the car model.
-- **Responses:**
-  - `204 No Content`: Car model deleted successfully.
 ---
+
+## Security
+
+Authentication is handled via JWT Bearer tokens. Include the token in the Authorization header for protected endpoints:
+
+```
+Authorization: Bearer {your_token}
+```
+
+The token is obtained afte
