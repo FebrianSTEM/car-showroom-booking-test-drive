@@ -17,10 +17,8 @@ namespace car_booking_service.Domain.Entities
         // Navigation Property
         public virtual CarModel CarModel { get; set; }
 
-        public DateTime BookingDateTime { get; set; }
-        public string CustomerName { get; set; } = string.Empty;
-        public string CustomerEmail { get; set; } = string.Empty;
-        public string CustomerPhone { get; set; } = string.Empty;
+        public DateTime StartBookingDate { get; set; }
+        public DateTime EndBookingDate { get; set; }
 
         [JsonIgnore]
         [NotMapped]

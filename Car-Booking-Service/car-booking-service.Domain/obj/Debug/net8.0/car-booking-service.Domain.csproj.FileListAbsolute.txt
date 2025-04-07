@@ -22,3 +22,15 @@ D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-servi
 D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Domain\obj\Debug\net8.0\refint\car-booking-service.Domain.dll
 D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Domain\obj\Debug\net8.0\car-booking-service.Domain.pdb
 D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Domain\obj\Debug\net8.0\ref\car-booking-service.Domain.dll
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Domain\bin\Debug\net8.0\car-booking-service.Domain.deps.json
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Domain\bin\Debug\net8.0\car-booking-service.Domain.dll
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Domain\bin\Debug\net8.0\car-booking-service.Domain.pdb
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Domain\obj\Debug\net8.0\car-booking-service.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Domain\obj\Debug\net8.0\car-booking-service.Domain.AssemblyInfoInputs.cache
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Domain\obj\Debug\net8.0\car-booking-service.Domain.AssemblyInfo.cs
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Domain\obj\Debug\net8.0\car-booking-service.Domain.csproj.CoreCompileInputs.cache
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Domain\obj\Debug\net8.0\car-booking-service.Domain.sourcelink.json
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Domain\obj\Debug\net8.0\car-booking-service.Domain.dll
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Domain\obj\Debug\net8.0\refint\car-booking-service.Domain.dll
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Domain\obj\Debug\net8.0\car-booking-service.Domain.pdb
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Domain\obj\Debug\net8.0\ref\car-booking-service.Domain.dll

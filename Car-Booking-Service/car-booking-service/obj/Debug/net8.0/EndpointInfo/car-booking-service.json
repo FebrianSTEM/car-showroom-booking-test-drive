@@ -799,13 +799,13 @@
             "type": "integer",
             "format": "int32"
           },
-          "booking_date_time": {
+          "start_booking_date": {
             "type": "string",
             "format": "date-time"
           },
-          "customer_name": {
+          "end_booking_date": {
             "type": "string",
-            "nullable": true
+            "format": "date-time"
           },
           "customer_email": {
             "type": "string",
@@ -1086,11 +1086,9 @@
       },
       "CreateBookingRequest": {
         "required": [
-          "booking_date_time",
           "car_id",
-          "customer_email",
-          "customer_name",
-          "customer_phone"
+          "end_booking_date",
+          "start_booking_date"
         ],
         "type": "object",
         "properties": {
@@ -1098,21 +1096,11 @@
             "type": "integer",
             "format": "int32"
           },
-          "customer_name": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "customer_phone": {
-            "minLength": 1,
+          "start_booking_date": {
             "type": "string",
-            "format": "tel"
+            "format": "date-time"
           },
-          "customer_email": {
-            "minLength": 1,
-            "type": "string",
-            "format": "email"
-          },
-          "booking_date_time": {
+          "end_booking_date": {
             "type": "string",
             "format": "date-time"
           }
@@ -1153,12 +1141,10 @@
       },
       "UpdateBookingRequest": {
         "required": [
-          "booking_date_time",
           "booking_id",
           "car_id",
-          "customer_email",
-          "customer_name",
-          "customer_phone"
+          "end_booking_date",
+          "start_booking_date"
         ],
         "type": "object",
         "properties": {
@@ -1170,21 +1156,11 @@
             "type": "integer",
             "format": "int32"
           },
-          "customer_name": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "customer_phone": {
-            "minLength": 1,
+          "start_booking_date": {
             "type": "string",
-            "format": "tel"
+            "format": "date-time"
           },
-          "customer_email": {
-            "minLength": 1,
-            "type": "string",
-            "format": "email"
-          },
-          "booking_date_time": {
+          "end_booking_date": {
             "type": "string",
             "format": "date-time"
           }

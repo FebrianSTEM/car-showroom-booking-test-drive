@@ -188,14 +188,14 @@ namespace car_booking_service.Controllers
             try
             {
                 BookingResponse response = await _bookingService.CreateBookingAsync(request);
-                message = $"{ResponseMessagesConstants.SUCCESS_CREATE_MESSAGE_TEMPLATE} booking for {request.CustomerName} with booking id {response.BookingId}";
+                message = $"{ResponseMessagesConstants.SUCCESS_CREATE_MESSAGE_TEMPLATE} booking for {request.CarId} with booking id {response.BookingId}";
                 HttpResults = new StandardResponse<BookingResponse>(Enums.StatusCode.Created, Enums.StatusMessage.Success, response, message);
 
                 return StatusCode((int)Enums.StatusCode.Created, HttpResults);
             }
             catch (HttpStatusCodeException ex)
             {
-                message = $"{ResponseMessagesConstants.FAILED_CREATE_MESSAGE_TEMPLATE} booking for {request.CustomerName} : {ex.Message}";
+                message = $"{ResponseMessagesConstants.FAILED_CREATE_MESSAGE_TEMPLATE} booking for {request.CarId} : {ex.Message}";
                 HttpResults = new StandardResponse<BookingResponse>((Enums.StatusCode)ex.StatusCode, Enums.StatusMessage.Error, null, message);
                 _logger.LogError(ex, message);
 
@@ -203,7 +203,7 @@ namespace car_booking_service.Controllers
             }
             catch (Exception ex)
             {
-                message = $"{ResponseMessagesConstants.FAILED_CREATE_MESSAGE_TEMPLATE} booking for {request.CustomerName}: {ex.Message}";
+                message = $"{ResponseMessagesConstants.FAILED_CREATE_MESSAGE_TEMPLATE} booking for {request.CarId}: {ex.Message}";
                 HttpResults = new StandardResponse<BookingResponse>(Enums.StatusCode.InternalServerErrorException, Enums.StatusMessage.Error, null, message);
                 _logger.LogError(ex, message);
 

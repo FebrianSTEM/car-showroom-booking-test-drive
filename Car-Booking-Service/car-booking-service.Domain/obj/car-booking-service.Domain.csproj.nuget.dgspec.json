@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\Car-Booking-Service\\car-booking-service.Domain\\car-booking-service.Domain.csproj": {}
+    "D:\\Belajar\\Leanring FullStack\\car-showroom-booking-test-drive\\Car-Booking-Service\\car-booking-service.Domain\\car-booking-service.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\Car-Booking-Service\\car-booking-service.Domain\\car-booking-service.Domain.csproj": {
+    "D:\\Belajar\\Leanring FullStack\\car-showroom-booking-test-drive\\Car-Booking-Service\\car-booking-service.Domain\\car-booking-service.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\Car-Booking-Service\\car-booking-service.Domain\\car-booking-service.Domain.csproj",
+        "projectUniqueName": "D:\\Belajar\\Leanring FullStack\\car-showroom-booking-test-drive\\Car-Booking-Service\\car-booking-service.Domain\\car-booking-service.Domain.csproj",
         "projectName": "car-booking-service.Domain",
-        "projectPath": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\Car-Booking-Service\\car-booking-service.Domain\\car-booking-service.Domain.csproj",
+        "projectPath": "D:\\Belajar\\Leanring FullStack\\car-showroom-booking-test-drive\\Car-Booking-Service\\car-booking-service.Domain\\car-booking-service.Domain.csproj",
         "packagesPath": "C:\\Users\\MSI SHOP ID\\.nuget\\packages\\",
-        "outputPath": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\Car-Booking-Service\\car-booking-service.Domain\\obj\\",
+        "outputPath": "D:\\Belajar\\Leanring FullStack\\car-showroom-booking-test-drive\\Car-Booking-Service\\car-booking-service.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

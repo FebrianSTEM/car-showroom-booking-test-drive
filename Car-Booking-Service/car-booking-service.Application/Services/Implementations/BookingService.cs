@@ -105,7 +105,7 @@ namespace car_booking_service.Application.Services.Implementations
 
             CarModel carModel = await ValidateCarModel(request.CarId);
 
-            if (request.CarId != booking.CarId || request.BookingDateTime != booking.BookingDateTime)
+            if (request.CarId != booking.CarId || request.StartBookingDate != booking.StartBookingDate || request.EndBookingDate != booking.EndBookingDate)
             {
                 await ValidateBookingSlotTime(request.Adapt<CreateBookingRequest>());
             }
@@ -144,15 +144,19 @@ namespace car_booking_service.Application.Services.Implementations
 
         public async Task ValidateBookingSlotTime(CreateBookingRequest request)
         {
-            DateTime startDate = request.BookingDateTime.AddMinutes(-1 * ValidationConstants.BOOKING_MINUTE_INTERVAL);
-            DateTime endDate = request.BookingDateTime.AddMinutes(ValidationConstants.BOOKING_MINUTE_INTERVAL);
+            var existingBookings = await _bookingRepository.GetListAsync(
+                request.StartBookingDate,
+                request.EndBookingDate,
+                request.CarId
+            );
 
-            var existingBookings = await _bookingRepository.GetListAsync(startDate,
-                                                                         endDate,
-                                                                         request.CarId);
             if (existingBookings.Any())
-                throw new HttpStatusCodeException((int)StatusCode.UnprocessableEntity, $"There's Already Existing Booking for Selected Time.");
+            {
+                throw new HttpStatusCodeException((int)StatusCode.UnprocessableEntity,
+                    "The selected booking time overlaps with another booking.");
+            }
         }
+
 
         public async Task ValidateRequestUpdateBooking(UpdateBookingRequest request)
         {

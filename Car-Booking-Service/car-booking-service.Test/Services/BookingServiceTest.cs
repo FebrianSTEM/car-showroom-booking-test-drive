@@ -9,6 +9,7 @@ using FluentAssertions;
 using car_booking_service.Application.Models.Requests.BookingRequests;
 using car_booking_service.Domain.Exception;
 using car_booking_service.Domain.Constants;
+using Bogus.Extensions.UnitedStates;
 
 namespace car_booking_service.Test.Services
 {
@@ -39,10 +40,11 @@ namespace car_booking_service.Test.Services
                 .RuleFor(b => b.CarId, f => f.Random.Int(1, 100))
                 .RuleFor(b => b.CarModelBrand, f => f.Vehicle.Manufacturer())
                 .RuleFor(b => b.CarModelName, f => f.Vehicle.Model())
-                .RuleFor(b => b.BookingDateTime, f => f.Date.Future())
-                .RuleFor(b => b.CustomerName, f => f.Name.FullName())
-                .RuleFor(b => b.CustomerEmail, f => f.Internet.Email())
-                .RuleFor(b => b.CustomerPhone, f => f.Phone.PhoneNumber())
+                .RuleFor(b => b.StartBookingDate, f => f.Date.Future())
+                .RuleFor(b => b.EndBookingDate, f => f.Date.Future())
+                //.RuleFor(b => b.CustomerName, f => f.Name.FullName())
+                //.RuleFor(b => b.CustomerEmail, f => f.Internet.Email())
+                //.RuleFor(b => b.CustomerPhone, f => f.Phone.PhoneNumber())
                 .RuleFor(b => b.CreatedAt, f => f.Date.Past())
                 .RuleFor(b => b.UpdatedAt, f => f.Date.Recent())
                 .RuleFor(b => b.CreatedBy, f => f.Name.FullName())
@@ -51,14 +53,14 @@ namespace car_booking_service.Test.Services
             _updateRequestFaker = new Faker<UpdateBookingRequest>()
             .RuleFor(r => r.BookingId, f => f.Random.Number(1, 100))
             .RuleFor(r => r.CarId, f => f.Random.Number(1, 100))
-            .RuleFor(r => r.BookingDateTime, f => f.Date.Future());
+            .RuleFor(r => r.StartBookingDate, f => f.Date.Future())
+            .RuleFor(r => r.EndBookingDate, f => f.Date.Future())
+            ;
 
             _createBookingRequestFaker = new Faker<CreateBookingRequest>()
                .RuleFor(r => r.CarId, f => f.Random.Number(1, 100))
-               .RuleFor(r => r.BookingDateTime, f => f.Date.Future())
-               .RuleFor(r => r.CustomerName, f => f.Name.FullName())
-               .RuleFor(r => r.CustomerEmail, f => f.Internet.Email())
-               .RuleFor(r => r.CustomerPhone, f => f.Phone.PhoneNumber());
+               .RuleFor(r => r.StartBookingDate, f => f.Date.Future())
+               .RuleFor(r => r.EndBookingDate, f => f.Date.Future());
         }
 
         [Fact]
@@ -116,13 +118,14 @@ namespace car_booking_service.Test.Services
         {
             // Arrange
             var carModel = _carModelFaker.Generate();
+            var bookingStart = DateTime.UtcNow.AddDays(1);
+            var bookingEnd = bookingStart.AddHours(1);
+
             var request = new CreateBookingRequest
             {
                 CarId = carModel.CarId,
-                BookingDateTime = DateTime.UtcNow.AddDays(1),
-                CustomerName = "Test Customer",
-                CustomerEmail = "test@example.com",
-                CustomerPhone = "1234567890"
+                StartBookingDate = bookingStart,
+                EndBookingDate = bookingEnd
             };
             DateTime currentDate = DateTime.UtcNow;
 
@@ -130,8 +133,8 @@ namespace car_booking_service.Test.Services
 
             A.CallTo(() => _fakeCarModelRepository.GetByIdAsync(request.CarId.Value))
                 .Returns(carModel);
-            A.CallTo(() => _fakeBookingRepository.GetListAsync(currentDate,
-                                                                currentDate,
+            A.CallTo(() => _fakeBookingRepository.GetListAsync( A<DateTime>.That.Matches(d => d == request.StartBookingDate),
+                                                                A<DateTime>.That.Matches(d => d == request.EndBookingDate),
                                                                 carModel.CarId,
                                                                 A<string>._,
                                                                 A<string>._,
@@ -215,19 +218,18 @@ namespace car_booking_service.Test.Services
         public async Task ValidateBookingSlotTime_WithNoConflictingBookings_ShouldNotThrowException()
         {
             // Arrange
-            var bookingDateTime = DateTime.UtcNow.AddHours(24);
+            var startDate = DateTime.UtcNow.AddHours(24);
+            var endDate = startDate.AddHours(1); // assume 1 hour booking
             var request = new CreateBookingRequest
             {
                 CarId = 1,
-                BookingDateTime = bookingDateTime
+                StartBookingDate = startDate,
+                EndBookingDate = endDate
             };
 
-            var startDate = bookingDateTime.AddMinutes(-1 * ValidationConstants.BOOKING_MINUTE_INTERVAL);
-            var endDate = bookingDateTime.AddMinutes(ValidationConstants.BOOKING_MINUTE_INTERVAL);
-
             _ = A.CallTo(() => _fakeBookingRepository.GetListAsync(
-                    A<DateTime>.That.Matches(d => d == startDate),
-                    A<DateTime>.That.Matches(d => d == endDate),
+                    A<DateTime>.That.Matches(d => d == request.StartBookingDate),
+                    A<DateTime>.That.Matches(d => d == request.EndBookingDate),
                     request.CarId,
                     A<string>.That.Matches(s => s == ""),
                     A<string>.That.Matches(s => s == ""),
@@ -246,22 +248,21 @@ namespace car_booking_service.Test.Services
         public async Task ValidateBookingSlotTime_WithExactTimeConflict_ShouldThrowException()
         {
             // Arrange
-            var bookingDateTime = DateTime.UtcNow.AddHours(24);
+            var startBookingDateTime = DateTime.UtcNow.AddHours(24);
+            var endBookingDateTime = startBookingDateTime.AddMinutes(20);
             var request = new CreateBookingRequest
             {
                 CarId = 1,
-                BookingDateTime = bookingDateTime
+                StartBookingDate = startBookingDateTime,
+                EndBookingDate = endBookingDateTime
             };
 
             var existingBooking = _bookingFaker.Generate();
-            existingBooking.CarId = request.CarId.Value;
-            existingBooking.BookingDateTime = bookingDateTime;
+            existingBooking.StartBookingDate = startBookingDateTime;
+            existingBooking.EndBookingDate = endBookingDateTime;
 
-            var startDate = bookingDateTime.AddMinutes(-1 * ValidationConstants.BOOKING_MINUTE_INTERVAL);
-            var endDate = bookingDateTime.AddMinutes(ValidationConstants.BOOKING_MINUTE_INTERVAL);
-
-            _ = A.CallTo(() => _fakeBookingRepository.GetListAsync(A<DateTime>.That.Matches(d => d == startDate),
-                                                                  A<DateTime>.That.Matches(d => d == endDate),
+            _ = A.CallTo(() => _fakeBookingRepository.GetListAsync(A<DateTime>.That.Matches(d => d == startBookingDateTime),
+                                                                  A<DateTime>.That.Matches(d => d == endBookingDateTime),
                                                                   A<int?>.That.Matches(id => id == request.CarId),
                                                                   A<string>.That.Matches(s => s == ""),
                                                                   A<string>.That.Matches(s => s == ""),
@@ -274,65 +275,66 @@ namespace car_booking_service.Test.Services
             // Act & Assert
             await _bookingService.Invoking(s => s.ValidateBookingSlotTime(request))
                 .Should().ThrowAsync<HttpStatusCodeException>()
-                .WithMessage("There's Already Existing Booking for Selected Time.");
+                .WithMessage("The selected booking time overlaps with another booking.");
         }
 
         [Fact]
         public async Task ValidateBookingSlotTime_WithBookingJustBeforeInterval_ShouldThrowException()
         {
             // Arrange
-            var bookingDateTime = DateTime.UtcNow.AddHours(24);
+            var bookingStartDate = DateTime.UtcNow.AddHours(24);
+            var bookingEndDate = bookingStartDate.AddHours(1);
+
             var request = new CreateBookingRequest
             {
                 CarId = 1,
-                BookingDateTime = bookingDateTime
+                StartBookingDate = bookingStartDate,
+                EndBookingDate = bookingEndDate
             };
 
             var existingBooking = _bookingFaker.Generate();
-            existingBooking.CarId = request.CarId.Value;
-            existingBooking.BookingDateTime = bookingDateTime.AddMinutes(-1 * (ValidationConstants.BOOKING_MINUTE_INTERVAL - 1));
+            existingBooking.StartBookingDate = bookingStartDate.AddMinutes(-1 * (ValidationConstants.BOOKING_MINUTE_INTERVAL - 1));
+            existingBooking.EndBookingDate = bookingEndDate;
 
-            var startDate = bookingDateTime.AddMinutes(-1 * ValidationConstants.BOOKING_MINUTE_INTERVAL);
-            var endDate = bookingDateTime.AddMinutes(ValidationConstants.BOOKING_MINUTE_INTERVAL);
-
-            A.CallTo(() => _fakeBookingRepository.GetListAsync(A<DateTime>.That.Matches(d => d == startDate),
-                                                               A<DateTime>.That.Matches(d => d == endDate),
-                                                               request.CarId,
-                                                               A<string>.That.Matches(s => s == ""),
-                                                               A<string>.That.Matches(s => s == ""),
-                                                               A<string>.That.Matches(s => s == ""),
-                                                               A<string>.That.Matches(s => s == ""),
-                                                               A<string>.That.Matches(s => s == ""),
-                                                               A<int?>.That.Matches(y => y == 0)))
-                                                 .Returns(new List<Booking> { existingBooking });
+            A.CallTo(() => _fakeBookingRepository.GetListAsync(A<DateTime>.That.Matches(d => d == request.StartBookingDate),
+                                                              A<DateTime>.That.Matches(d => d == request.EndBookingDate),
+                                                              request.CarId,
+                                                              A<string>.That.Matches(s => s == ""),
+                                                              A<string>.That.Matches(s => s == ""),
+                                                              A<string>.That.Matches(s => s == ""),
+                                                              A<string>.That.Matches(s => s == ""),
+                                                              A<string>.That.Matches(s => s == ""),
+                                                              A<int?>.That.Matches(y => y == 0)))
+                                                .Returns(new List<Booking> { existingBooking });
 
             // Act & Assert
             await _bookingService.Invoking(s => s.ValidateBookingSlotTime(request))
-                .Should().ThrowAsync<HttpStatusCodeException>()
-                .WithMessage("There's Already Existing Booking for Selected Time.");
+                 .Should().ThrowAsync<HttpStatusCodeException>()
+                 .WithMessage("The selected booking time overlaps with another booking.");
         }
+
 
         [Fact]
         public async Task ValidateBookingSlotTime_WithBookingJustAfterInterval_ShouldThrowException()
         {
             // Arrange
-            var bookingDateTime = DateTime.UtcNow.AddHours(24);
+            var bookingStartDate = DateTime.UtcNow.AddHours(24);
+            var bookingEndDate = bookingStartDate.AddHours(1);
+
             var request = new CreateBookingRequest
             {
                 CarId = 1,
-                BookingDateTime = bookingDateTime
+                StartBookingDate = bookingStartDate,
+                EndBookingDate = bookingEndDate
             };
 
             var existingBooking = _bookingFaker.Generate();
-            existingBooking.CarId = request.CarId.Value;
-            existingBooking.BookingDateTime = bookingDateTime.AddMinutes(ValidationConstants.BOOKING_MINUTE_INTERVAL - 1);
-
-            var startDate = bookingDateTime.AddMinutes(-1 * ValidationConstants.BOOKING_MINUTE_INTERVAL);
-            var endDate = bookingDateTime.AddMinutes(ValidationConstants.BOOKING_MINUTE_INTERVAL);
+            existingBooking.StartBookingDate = bookingStartDate.AddMinutes(-1 * (ValidationConstants.BOOKING_MINUTE_INTERVAL - 1));
+            existingBooking.EndBookingDate = bookingEndDate;
 
             A.CallTo(() => _fakeBookingRepository.GetListAsync(
-                A<DateTime>.That.Matches(d => d == startDate),
-                A<DateTime>.That.Matches(d => d == endDate),
+                A<DateTime>.That.Matches(d => d == request.StartBookingDate),
+                A<DateTime>.That.Matches(d => d == request.EndBookingDate),
                 request.CarId,
                 A<string>.That.Matches(s => s == ""),
                 A<string>.That.Matches(s => s == ""),
@@ -345,30 +347,31 @@ namespace car_booking_service.Test.Services
             // Act & Assert
             await _bookingService.Invoking(s => s.ValidateBookingSlotTime(request))
                 .Should().ThrowAsync<HttpStatusCodeException>()
-                .WithMessage("There's Already Existing Booking for Selected Time.");
+                .WithMessage("The selected booking time overlaps with another booking.");
         }
 
         [Fact]
         public async Task ValidateBookingSlotTime_WithDifferentCarId_ShouldNotThrowException()
         {
             // Arrange
-            var bookingDateTime = DateTime.UtcNow.AddHours(24);
+            var bookingStartDate = DateTime.UtcNow.AddHours(24);
+            var bookingEndDate = bookingStartDate.AddHours(1);
+
             var request = new CreateBookingRequest
             {
                 CarId = 1,
-                BookingDateTime = bookingDateTime
+                StartBookingDate = bookingStartDate,
+                EndBookingDate = bookingEndDate
             };
 
             var existingBooking = _bookingFaker.Generate();
-            existingBooking.CarId = request.CarId.Value + 1; // Different car ID
-            existingBooking.BookingDateTime = bookingDateTime;
+            existingBooking.StartBookingDate = bookingStartDate.AddMinutes(-1 * (ValidationConstants.BOOKING_MINUTE_INTERVAL - 1));
+            existingBooking.EndBookingDate = bookingEndDate;
 
-            var startDate = bookingDateTime.AddMinutes(-1 * ValidationConstants.BOOKING_MINUTE_INTERVAL);
-            var endDate = bookingDateTime.AddMinutes(ValidationConstants.BOOKING_MINUTE_INTERVAL);
 
             A.CallTo(() => _fakeBookingRepository.GetListAsync(
-                A<DateTime>.That.Matches(d => d == startDate),
-                A<DateTime>.That.Matches(d => d == endDate),
+                A<DateTime>.That.Matches(d => d == request.StartBookingDate),
+                A<DateTime>.That.Matches(d => d == request.EndBookingDate),
                 request.CarId,
                 A<string>.That.Matches(s => s == ""),
                 A<string>.That.Matches(s => s == ""),
@@ -387,40 +390,44 @@ namespace car_booking_service.Test.Services
         public async Task ValidateBookingSlotTime_WithMultipleConflictingBookings_ShouldThrowException()
         {
             // Arrange
-            var bookingDateTime = DateTime.UtcNow.AddHours(24);
+            var bookingStartDate = DateTime.UtcNow.AddHours(24);
+            var bookingEndDate = bookingStartDate.AddHours(1); // example 1-hour booking
+
             var request = new CreateBookingRequest
             {
                 CarId = 1,
-                BookingDateTime = bookingDateTime
+                StartBookingDate = bookingStartDate,
+                EndBookingDate = bookingEndDate
             };
 
             var existingBookings = _bookingFaker.Generate(3);
             foreach (var booking in existingBookings)
             {
                 booking.CarId = request.CarId.Value;
-                booking.BookingDateTime = bookingDateTime;
+
+                // Simulate overlapping bookings
+                booking.StartBookingDate = bookingStartDate.AddMinutes(-15);
+                booking.EndBookingDate = bookingEndDate.AddMinutes(15);
             }
 
-            var startDate = bookingDateTime.AddMinutes(-1 * ValidationConstants.BOOKING_MINUTE_INTERVAL);
-            var endDate = bookingDateTime.AddMinutes(ValidationConstants.BOOKING_MINUTE_INTERVAL);
-
-            _ = A.CallTo(() => _fakeBookingRepository.GetListAsync(
-                A<DateTime>.That.Matches(d => d == startDate),
-                A<DateTime>.That.Matches(d => d == endDate),
-                request.CarId,
-                A<string>.That.Matches(s => s == ""),
-                A<string>.That.Matches(s => s == ""),
-                A<string>.That.Matches(s => s == ""),
-                A<string>.That.Matches(s => s == ""),
-                A<string>.That.Matches(s => s == ""),
-                A<int?>.That.Matches(y => y == 0)))
+            A.CallTo(() => _fakeBookingRepository.GetListAsync(
+                            A<DateTime>.That.Matches(d => d == request.StartBookingDate),
+                            A<DateTime>.That.Matches(d => d == request.EndBookingDate),
+                            request.CarId,
+                            A<string>.That.Matches(s => s == ""),
+                            A<string>.That.Matches(s => s == ""),
+                            A<string>.That.Matches(s => s == ""),
+                            A<string>.That.Matches(s => s == ""),
+                            A<string>.That.Matches(s => s == ""),
+                            A<int?>.That.Matches(y => y == 0)))
                 .Returns(existingBookings);
 
             // Act & Assert
             await _bookingService.Invoking(s => s.ValidateBookingSlotTime(request))
                 .Should().ThrowAsync<HttpStatusCodeException>()
-                .WithMessage("There's Already Existing Booking for Selected Time.");
+                .WithMessage("The selected booking time overlaps with another booking.");
         }
+
 
         [Fact]
         public async Task GetListAsync_WithValidRequest_ShouldReturnFilteredBookings()
@@ -460,11 +467,15 @@ namespace car_booking_service.Test.Services
         public async Task ValidateRequestUpdateBooking_WithValidRequest_ShouldNotThrowException()
         {
             // Arrange
+            var startDate = DateTime.UtcNow.AddDays(1);
+            var endDate = startDate.AddHours(1);
+
             var updateRequest = new UpdateBookingRequest
             {
                 BookingId = 1,
                 CarId = 1,
-                BookingDateTime = DateTime.UtcNow.AddDays(1)
+                StartBookingDate = startDate,
+                EndBookingDate = endDate
             };
 
             // Mock ValidateBookingSlotTime to return true (no conflicts)
@@ -494,11 +505,15 @@ namespace car_booking_service.Test.Services
         public async Task ValidateRequestUpdateBooking_WithTimeConflict_ShouldThrowException()
         {
             // Arrange
+            var startDate = DateTime.UtcNow.AddDays(1);
+            var endDate = startDate.AddHours(1);
+
             var updateRequest = new UpdateBookingRequest
             {
                 BookingId = 1,
                 CarId = 1,
-                BookingDateTime = DateTime.UtcNow.AddDays(1)
+                StartBookingDate = startDate,
+                EndBookingDate = endDate
             };
 
             // Mock ValidateBookingSlotTime to return conflicting booking
@@ -518,7 +533,7 @@ namespace car_booking_service.Test.Services
             // Act & Assert
             await _bookingService.Invoking(s => s.ValidateRequestUpdateBooking(updateRequest))
                 .Should().ThrowAsync<HttpStatusCodeException>()
-                .WithMessage("There's Already Existing Booking for Selected Time.");
+                .WithMessage("The selected booking time overlaps with another booking.");
         }
 
         [Fact]

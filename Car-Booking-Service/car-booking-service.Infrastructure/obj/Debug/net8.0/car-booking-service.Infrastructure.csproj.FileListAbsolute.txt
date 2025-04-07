@@ -32,3 +32,21 @@ D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-servi
 D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Infrastructure\bin\Debug\net8.0\car-booking-service.Domain.pdb
 D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\car-book.6674583C.Up2Date
 D:\Belajar\Leanring FullStack\Mandiri Test\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\ref\car-booking-service.Infrastructure.dll
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\bin\Debug\net8.0\car-booking-service.Infrastructure.deps.json
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\bin\Debug\net8.0\car-booking-service.Infrastructure.dll
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\bin\Debug\net8.0\car-booking-service.Infrastructure.pdb
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\bin\Debug\net8.0\car-booking-service.Application.dll
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\bin\Debug\net8.0\car-booking-service.Domain.dll
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\bin\Debug\net8.0\car-booking-service.Application.pdb
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\bin\Debug\net8.0\car-booking-service.Domain.pdb
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\car-booking-service.Infrastructure.csproj.AssemblyReference.cache
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\car-booking-service.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\car-booking-service.Infrastructure.AssemblyInfoInputs.cache
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\car-booking-service.Infrastructure.AssemblyInfo.cs
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\car-booking-service.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\car-booking-service.Infrastructure.sourcelink.json
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\car-book.6674583C.Up2Date
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\car-booking-service.Infrastructure.dll
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\refint\car-booking-service.Infrastructure.dll
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\car-booking-service.Infrastructure.pdb
+D:\Belajar\Leanring FullStack\car-showroom-booking-test-drive\Car-Booking-Service\car-booking-service.Infrastructure\obj\Debug\net8.0\ref\car-booking-service.Infrastructure.dll

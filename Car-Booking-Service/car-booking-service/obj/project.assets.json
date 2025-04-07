@@ -2548,11 +2548,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\Car-Booking-Service\\car-booking-service\\car-booking-service.csproj",
+      "projectUniqueName": "D:\\Belajar\\Leanring FullStack\\car-showroom-booking-test-drive\\Car-Booking-Service\\car-booking-service\\car-booking-service.csproj",
       "projectName": "car-booking-service",
-      "projectPath": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\Car-Booking-Service\\car-booking-service\\car-booking-service.csproj",
+      "projectPath": "D:\\Belajar\\Leanring FullStack\\car-showroom-booking-test-drive\\Car-Booking-Service\\car-booking-service\\car-booking-service.csproj",
       "packagesPath": "C:\\Users\\MSI SHOP ID\\.nuget\\packages\\",
-      "outputPath": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\Car-Booking-Service\\car-booking-service\\obj\\",
+      "outputPath": "D:\\Belajar\\Leanring FullStack\\car-showroom-booking-test-drive\\Car-Booking-Service\\car-booking-service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -2575,11 +2575,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\Car-Booking-Service\\car-booking-service.Application\\car-booking-service.Application.csproj": {
-              "projectPath": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\Car-Booking-Service\\car-booking-service.Application\\car-booking-service.Application.csproj"
+            "D:\\Belajar\\Leanring FullStack\\car-showroom-booking-test-drive\\Car-Booking-Service\\car-booking-service.Application\\car-booking-service.Application.csproj": {
+              "projectPath": "D:\\Belajar\\Leanring FullStack\\car-showroom-booking-test-drive\\Car-Booking-Service\\car-booking-service.Application\\car-booking-service.Application.csproj"
             },
-            "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\Car-Booking-Service\\car-booking-service.Infrastructure\\car-booking-service.Infrastructure.csproj": {
-              "projectPath": "D:\\Belajar\\Leanring FullStack\\Mandiri Test\\Car-Booking-Service\\car-booking-service.Infrastructure\\car-booking-service.Infrastructure.csproj"
+            "D:\\Belajar\\Leanring FullStack\\car-showroom-booking-test-drive\\Car-Booking-Service\\car-booking-service.Infrastructure\\car-booking-service.Infrastructure.csproj": {
+              "projectPath": "D:\\Belajar\\Leanring FullStack\\car-showroom-booking-test-drive\\Car-Booking-Service\\car-booking-service.Infrastructure\\car-booking-service.Infrastructure.csproj"
             }
           }
         }

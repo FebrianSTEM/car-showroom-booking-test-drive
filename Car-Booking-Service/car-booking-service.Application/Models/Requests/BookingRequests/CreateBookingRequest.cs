@@ -12,18 +12,10 @@ namespace car_booking_service.Application.Models.Requests.BookingRequests
         [Required(ErrorMessage = "Car Model is Required.")]
         public int? CarId { get; set; }
 
-        [Required(ErrorMessage = "Customer Name is Required.")]
-        public string CustomerName { get; set; } = string.Empty;
+        [Required(ErrorMessage = "Please Select Start Booking Date and Time.")]
+        public DateTime StartBookingDate { get; set; }
 
-        [Required(ErrorMessage = "Customer Phone is Required.")]
-        [Phone(ErrorMessage = "Invalid phone number format.")]
-        public string CustomerPhone { get; set; } = string.Empty;
-
-        [Required(ErrorMessage = "Email Address is Required")]
-        [EmailAddress(ErrorMessage = "Invalid Email Address format.")]
-        public string CustomerEmail { get; set; } = string.Empty;
-
-        [Required(ErrorMessage = "Please Select Booking Date and Time.")]
-        public DateTime BookingDateTime { get; set; }
+        [Required(ErrorMessage = "Please Select Start Booking Date and Time.")]
+        public DateTime EndBookingDate { get; set; }
     }
 }

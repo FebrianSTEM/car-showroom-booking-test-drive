@@ -26,10 +26,11 @@ namespace car_booking_service.Infrastructure.Repositories
                                                 CarModelBrand = carModel.Brand,
                                                 CarModelName = carModel.Model,
                                                 CarModelYear = carModel.Year,
-                                                BookingDateTime = booking.BookingDateTime,
-                                                CustomerName = booking.CustomerName,
-                                                CustomerPhone = booking.CustomerPhone,
-                                                CustomerEmail = booking.CustomerEmail,
+                                                StartBookingDate = booking.StartBookingDate,
+                                                EndBookingDate = booking.EndBookingDate,
+                                                //CustomerName = booking.CustomerName,
+                                                //CustomerPhone = booking.CustomerPhone,
+                                                //CustomerEmail = booking.CustomerEmail,
                                                 CreatedAt = booking.CreatedAt,
                                                 CreatedBy = booking.CreatedBy,
                                                 UpdatedBy = booking.UpdatedBy,
@@ -49,8 +50,8 @@ namespace car_booking_service.Infrastructure.Repositories
                                                       int? carYear = 0)
         {
             var bookingQuery = _context.Bookings.AsNoTracking()
-                                                .Where(x => x.BookingDateTime >= startDate &&
-                                                            x.BookingDateTime <= endDate)
+                                                .Where(x => x.StartBookingDate >= startDate &&
+                                                            x.EndBookingDate <= endDate)
                                                 .Join(
                                                     _context.CarModels.AsNoTracking(),
                                                     booking => booking.CarId,
@@ -62,10 +63,8 @@ namespace car_booking_service.Infrastructure.Repositories
                                                         CarModelBrand = carModel.Brand,
                                                         CarModelName = carModel.Model,
                                                         CarModelYear = carModel.Year,
-                                                        BookingDateTime = booking.BookingDateTime,
-                                                        CustomerName = booking.CustomerName,
-                                                        CustomerPhone = booking.CustomerPhone,
-                                                        CustomerEmail = booking.CustomerEmail,
+                                                        StartBookingDate = booking.StartBookingDate,
+                                                        EndBookingDate = booking.EndBookingDate,
                                                         CreatedAt = booking.CreatedAt,
                                                         CreatedBy = booking.CreatedBy,
                                                         UpdatedBy = booking.UpdatedBy,
@@ -83,14 +82,14 @@ namespace car_booking_service.Infrastructure.Repositories
             if (!string.IsNullOrEmpty(carModel))
                 bookingQuery = bookingQuery.Where(x => x.CarModelName == carModel);
 
-            if (!string.IsNullOrEmpty(customerName))
-                bookingQuery = bookingQuery.Where(x => x.CustomerName == customerName);
+            //if (!string.IsNullOrEmpty(customerName))
+            //    bookingQuery = bookingQuery.Where(x => x.CustomerName == customerName);
 
-            if (!string.IsNullOrEmpty(customerEmail))
-                bookingQuery = bookingQuery.Where(x => x.CustomerEmail == customerEmail);
+            //if (!string.IsNullOrEmpty(customerEmail))
+            //    bookingQuery = bookingQuery.Where(x => x.CustomerEmail == customerEmail);
 
-            if (!string.IsNullOrEmpty(customerPhone))
-                bookingQuery = bookingQuery.Where(x => x.CustomerPhone == customerPhone);
+            //if (!string.IsNullOrEmpty(customerPhone))
+            //    bookingQuery = bookingQuery.Where(x => x.CustomerPhone == customerPhone);
 
             var bookingResult = await bookingQuery.ToListAsync();
 
@@ -110,8 +109,8 @@ namespace car_booking_service.Infrastructure.Repositories
                                                            int? carYear = 0)
         {
             var bookingQuery = _context.Bookings.AsNoTracking()
-                                            .Where(x => x.BookingDateTime >= startDate &&
-                                                        x.BookingDateTime <= endDate)
+                                            .Where(x => x.StartBookingDate >= startDate &&
+                                                        x.EndBookingDate <= endDate)
                                             .Join(
                                                 _context.CarModels.AsNoTracking(),
                                                 booking => booking.CarId,
@@ -123,10 +122,11 @@ namespace car_booking_service.Infrastructure.Repositories
                                                     CarModelBrand = carModel.Brand,
                                                     CarModelName = carModel.Model,
                                                     CarModelYear = carModel.Year,
-                                                    BookingDateTime = booking.BookingDateTime,
-                                                    CustomerName = booking.CustomerName,
-                                                    CustomerPhone = booking.CustomerPhone,
-                                                    CustomerEmail = booking.CustomerEmail,
+                                                    StartBookingDate = booking.StartBookingDate,
+                                                    EndBookingDate = booking.EndBookingDate,
+                                                    //CustomerName = booking.CustomerName,
+                                                    //CustomerPhone = booking.CustomerPhone,
+                                                    //CustomerEmail = booking.CustomerEmail,
                                                     CreatedAt = booking.CreatedAt,
                                                     CreatedBy = booking.CreatedBy,
                                                     UpdatedBy = booking.UpdatedBy,
@@ -144,14 +144,14 @@ namespace car_booking_service.Infrastructure.Repositories
             if (!string.IsNullOrEmpty(carModel))
                 bookingQuery = bookingQuery.Where(x => x.CarModelName == carModel);
 
-            if (!string.IsNullOrEmpty(customerName))
-                bookingQuery = bookingQuery.Where(x => x.CustomerName == customerName);
+            //if (!string.IsNullOrEmpty(customerName))
+            //    bookingQuery = bookingQuery.Where(x => x.CustomerName == customerName);
 
-            if (!string.IsNullOrEmpty(customerEmail))
-                bookingQuery = bookingQuery.Where(x => x.CustomerEmail == customerEmail);
+            //if (!string.IsNullOrEmpty(customerEmail))
+            //    bookingQuery = bookingQuery.Where(x => x.CustomerEmail == customerEmail);
 
-            if (!string.IsNullOrEmpty(customerPhone))
-                bookingQuery = bookingQuery.Where(x => x.CustomerPhone == customerPhone);
+            //if (!string.IsNullOrEmpty(customerPhone))
+            //    bookingQuery = bookingQuery.Where(x => x.CustomerPhone == customerPhone);
 
             var totalRecords = await bookingQuery.CountAsync();
 
