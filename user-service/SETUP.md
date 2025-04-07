@@ -58,24 +58,39 @@ Before running the .NET 8 project, ensure you have the following installed on yo
 #### From Visual Studio 2022
 1. Open the project in **Visual Studio 2022**.
 2. Set startup project:
-   - Right-click on the **car-booking-service** project in the **Solution Explorer** and select **Set as Startup Project**.
+   - Right-click on the **user-service** project in the **Solution Explorer** and select **Set as Startup Project**.
 3. Run the project:
    - Click the green **Start** button or press `F5` to run the application in Debug mode.
    - Alternatively, press `Ctrl + F5` to run the application without debugging.
-4. Visual Studio will launch the application and open the default browser at the application URL http://localhost:5276/swagger or https://localhost:7125/swagger
+4. Visual Studio will launch the application and open the default browser at the application URL http://localhost:5276/swagger or https://localhost:7126/swagger
 
 #### From the Command Line
 - Run the project in development mode:
   ```bash
-  dotnet run --project car-booking-service
+  dotnet run --project user-service
   ```
 
 ### 6. Access the Application
 - Open a browser and navigate to the URL specified in the terminal or Visual Studio output (e.g., `https://localhost:5001`).
 URL http://localhost:5276/swagger or https://localhost:7125/swagger
+or you can change it in Properties/launchsetting.json
+
+```json
+"https": {
+  "commandName": "Project",
+  "dotnetRunMessages": true,
+  "launchBrowser": true,
+  "launchUrl": "swagger",
+  "applicationUrl": "https://localhost:7125;http://localhost:5276",
+  "environmentVariables": {
+    "ASPNETCORE_ENVIRONMENT": "Development"
+  }
+}
+ ```
+change it based on available port on your device.
 ---
 
 ### 7. Logging
-- To access logging data you could access it in car-booking-service\Logs
+- To access logging data you could access it in user-service\Logs
 
 ---
