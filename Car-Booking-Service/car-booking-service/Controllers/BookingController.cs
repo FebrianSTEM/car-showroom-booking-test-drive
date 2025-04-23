@@ -18,7 +18,8 @@ namespace car_booking_service.Controllers
         private readonly IBookingService _bookingService;
         private readonly ILogger<BookingController> _logger;
 
-        public BookingController(IBookingService bookingService, ILogger<BookingController> logger)
+        public BookingController(IBookingService bookingService,
+                                 ILogger<BookingController> logger)
         {
             _bookingService = bookingService;
             _logger = logger;

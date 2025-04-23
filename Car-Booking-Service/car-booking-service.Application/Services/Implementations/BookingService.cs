@@ -1,5 +1,7 @@
 ﻿using car_booking_service.Application.Models.Requests.BookingRequests;
+using car_booking_service.Application.Models.Requests.UserServiceRequests;
 using car_booking_service.Application.Models.Responses.BookingResponses;
+using car_booking_service.Application.Models.Responses.UserServiceResponses;
 using car_booking_service.Application.Services.Interfaces;
 using car_booking_service.Domain.Constants;
 using car_booking_service.Domain.Entities;
@@ -14,17 +16,36 @@ namespace car_booking_service.Application.Services.Implementations
     {
         private readonly IBookingRepository _bookingRepository;
         private readonly ICarModelRepository _carModelRepository;
+        private readonly IUserService _userService;
 
-        public BookingService(IBookingRepository bookingRepository, ICarModelRepository carModelRepository)
+        public BookingService(IBookingRepository bookingRepository, 
+                              ICarModelRepository carModelRepository,
+                              IUserService userService)
         {
             _bookingRepository = bookingRepository;
             _carModelRepository = carModelRepository;
+            _userService = userService;
         }
 
         public async Task<IEnumerable<BookingResponse>> GetAllBookingAsync()
         {
             IEnumerable<Booking> bookings = await _bookingRepository.GetAllAsync();
-            return bookings.Adapt<IEnumerable<BookingResponse>>();
+
+            List<string> userIds = bookings.Select(x => x.CreatedBy).Distinct().ToList();
+            List<UserResponse> users = await _userService.GetUserByIds(userIds);
+            var bookingResponseList = bookings.Adapt<List<BookingResponse>>();
+
+            bookingResponseList.ForEach(booking =>
+            {
+                var user = users.FirstOrDefault(u => u.Id == booking.CreatedBy);
+                if (user != null)
+                {
+                    booking.CustomerEmail = user.Email;
+                    booking.CustomerPhone = user.PhoneNumber;
+                }
+            });
+
+            return bookingResponseList;
         }
 
         public async Task<BookingResponse> GetBookingByIdAsync(int id)
@@ -37,17 +58,22 @@ namespace car_booking_service.Application.Services.Implementations
             if (carModel == null)
                 throw new HttpStatusCodeException((int)StatusCode.NotFound, $"Car Model with ID {booking.CarId} not found");
 
+            List<string> userIds = new List<string>();
+            userIds.Add(booking.CreatedBy);
+            List<UserResponse> users = await _userService.GetUserByIds(userIds);
+            var user = users.FirstOrDefault(u => u.Id == booking.CreatedBy);
             BookingResponse result = booking.Adapt<BookingResponse>();
             result.CarModelBrand = carModel.Brand;
             result.CarModelName = carModel.Model;
             result.CarModelYear = carModel.Year;
+            result.CustomerEmail = user.Email;
+            result.CustomerPhone = user.PhoneNumber;
 
             return result;
         }
 
         public async Task<List<BookingResponse>> GetListAsync(GetBookingListRequest request)
         {
-            //add validation Here
             var result = await _bookingRepository.GetListAsync(request.StartDate,
                                                                request.EndDate,
                                                                request.CarId,
@@ -57,7 +83,21 @@ namespace car_booking_service.Application.Services.Implementations
                                                                request.CarBrand,
                                                                request.CarModel,
                                                                request.CarYear);
-            return result.Adapt<List<BookingResponse>>();
+            
+            List<UserResponse> users = await _userService.GetUserByIds(result.Select(x => x.CreatedBy).ToList());
+
+            var response = result.Adapt<List<BookingResponse>>();
+            response.ForEach(x =>
+            {
+                var user = users.FirstOrDefault(u => u.Id == x.CreatedBy);
+                if (user != null)
+                {
+                    x.CustomerEmail = user.Email;
+                    x.CustomerPhone = user.PhoneNumber;
+                }
+            });
+
+            return response;
         }
 
         public async Task<(List<BookingResponse>, int)> GetPaginatedAsync(GetPaginatedBookingsRequest request)
@@ -82,17 +122,22 @@ namespace car_booking_service.Application.Services.Implementations
         public async Task<BookingResponse> CreateBookingAsync(CreateBookingRequest request)
         {
             CarModel carModel = await ValidateRequestCreateBookingAsync(request);
-            Booking bookingEntity = request.Adapt<Booking>();
-            DateTime currentTime = DateTime.UtcNow;
-            bookingEntity.CreatedAt = currentTime;
-            bookingEntity.UpdatedAt = currentTime;
+            Booking bookingEntity = request.Adapt<Booking>();         
             await _bookingRepository.AddAsync(bookingEntity);
+
+            List<string> userIds = new List<string>();
+            userIds.Add(bookingEntity.CreatedBy);
+
+            List<UserResponse> users = await _userService.GetUserByIds(userIds);
+            var user = users.FirstOrDefault(u => u.Id == bookingEntity.CreatedBy);
 
             var result = bookingEntity.Adapt<BookingResponse>();
             result.CarId = carModel.CarId;
             result.CarModelBrand = carModel.Brand;
             result.CarModelName = carModel.Model;
             result.CarModelYear = carModel.Year;
+            result.CustomerPhone = user.PhoneNumber;
+            result.CustomerEmail = user.Email;
 
             return result;
         }

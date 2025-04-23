@@ -18,6 +18,7 @@ namespace car_booking_service.Test.Services
         private readonly IBookingRepository _fakeBookingRepository;
         private readonly ICarModelRepository _fakeCarModelRepository;
         private readonly IBookingService _bookingService;
+        private readonly IUserService _userService;
         private readonly Faker<Booking> _bookingFaker;
         private readonly Faker<CarModel> _carModelFaker;
         private readonly Faker<UpdateBookingRequest> _updateRequestFaker;
@@ -27,7 +28,7 @@ namespace car_booking_service.Test.Services
         {
             _fakeBookingRepository = A.Fake<IBookingRepository>();
             _fakeCarModelRepository = A.Fake<ICarModelRepository>();
-            _bookingService = new BookingService(_fakeBookingRepository, _fakeCarModelRepository);
+            _bookingService = new BookingService(_fakeBookingRepository, _fakeCarModelRepository, _userService);
 
             _carModelFaker = new Faker<CarModel>()
                 .RuleFor(c => c.CarId, f => f.Random.Int(1, 100))

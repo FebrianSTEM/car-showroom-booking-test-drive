@@ -14,6 +14,11 @@ namespace car_booking_service.Domain.Common
         public T? Data { get; set; }
         public string Message { get; set; }
 
+        public StandardResponse()
+        {
+            
+        }
+
         public StandardResponse(StatusCode responseStatusCodeType,
                                StatusMessage responseStatusMessageType,
                                T? data,

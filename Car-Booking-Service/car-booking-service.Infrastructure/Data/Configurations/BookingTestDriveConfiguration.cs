@@ -17,18 +17,6 @@ namespace car_booking_service.Infrastructure.Data.Configurations
                    .OnDelete(DeleteBehavior.Restrict);
             builder.Property(x => x.CarId)
                    .IsRequired();
-           
-            //builder.Property(x => x.CustomerName)
-            //       .IsRequired()
-            //       .HasMaxLength(100);
-
-            //builder.Property(x => x.CustomerEmail)
-            //       .IsRequired()
-            //       .HasMaxLength(50);
-
-            //builder.Property(x => x.CustomerPhone)
-            //       .IsRequired()
-            //       .HasMaxLength(20);
 
             builder.Property(x => x.StartBookingDate)
                    .IsRequired();

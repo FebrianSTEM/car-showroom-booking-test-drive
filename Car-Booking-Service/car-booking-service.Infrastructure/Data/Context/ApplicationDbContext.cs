@@ -1,5 +1,7 @@
-﻿using car_booking_service.Domain.Entities;
+﻿using car_booking_service.Application.Services.Interfaces;
+using car_booking_service.Domain.Entities;
 using car_booking_service.Infrastructure.Data.Configurations;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using static car_booking_service.Domain.Constants.ValidationConstants;
 
@@ -8,8 +10,14 @@ namespace car_booking_service.Infrastructure.Data.Context
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options) { }
+        private readonly ICurrentUserContext _userContext;
+
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options,
+                                    ICurrentUserContext userContext)
+            : base(options) 
+        {
+            _userContext = userContext;
+        }
 
         public DbSet<CarModel> CarModels { get; set; }
         public DbSet<Booking> Bookings { get; set; }
@@ -30,14 +38,14 @@ namespace car_booking_service.Infrastructure.Data.Context
                 if (entry.State == EntityState.Added)
                 {
                     entry.Entity.CreatedAt = DateTime.Now;
-                    entry.Entity.CreatedBy = SYSTEM_USER;
+                    entry.Entity.CreatedBy = _userContext.UserId;
                     entry.Entity.UpdatedAt = entry.Entity.CreatedAt;
-                    entry.Entity.UpdatedBy = SYSTEM_USER;
+                    entry.Entity.UpdatedBy = _userContext.UserId;
                 }
                 else if (entry.State == EntityState.Modified)
                 {
                     entry.Entity.UpdatedAt = DateTime.Now;
-                    entry.Entity.UpdatedBy = SYSTEM_USER;
+                    entry.Entity.UpdatedBy = _userContext.UserId;
                 }
             }
             return base.SaveChanges();
@@ -52,14 +60,14 @@ namespace car_booking_service.Infrastructure.Data.Context
                 if (entry.State == EntityState.Added)
                 {
                     entry.Entity.CreatedAt = DateTime.Now;
-                    entry.Entity.CreatedBy = SYSTEM_USER;
+                    entry.Entity.CreatedBy = _userContext.UserId;
                     entry.Entity.UpdatedAt = entry.Entity.CreatedAt;
-                    entry.Entity.UpdatedBy = SYSTEM_USER;
+                    entry.Entity.UpdatedBy = _userContext.UserId;
                 }
                 else if (entry.State == EntityState.Modified)
                 {
                     entry.Entity.UpdatedAt = DateTime.Now;
-                    entry.Entity.UpdatedBy = SYSTEM_USER;
+                    entry.Entity.UpdatedBy = _userContext.UserId;
                 }
             }
 

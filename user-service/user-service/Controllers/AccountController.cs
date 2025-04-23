@@ -82,6 +82,31 @@ namespace user_service.Controllers
             }
         }
 
+        [HttpPost("by-ids")]
+        [ProducesResponseType(200, Type = typeof(StandardResponse<UserResponse>))]
+        public async Task<ActionResult<UserResponse>> GetUserByIds([FromBody] List<Guid> userIds)
+        {
+            try
+            {
+                var result = await _accountService.GetUserByIdsAsync(userIds);
+                string message = $"User successfuly Retrieved";
+                HttpResults = new StandardResponse<List<UserResponse>>(Enums.StatusCode.OK, Enums.StatusMessage.Success, result, message);
+                return StatusCode((int)StatusCodes.Status200OK, HttpResults);
+            }
+            catch (InvalidOperationException ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                HttpResults = new StandardResponse<List<UserResponse>>(Enums.StatusCode.Unauthorized, Enums.StatusMessage.Error, null, ex.Message);
+                return StatusCode((int)StatusCodes.Status401Unauthorized, HttpResults);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                HttpResults = new StandardResponse<List<UserResponse>>(Enums.StatusCode.InternalServerErrorException, Enums.StatusMessage.Error, null, ex.Message);
+                return StatusCode((int)StatusCodes.Status500InternalServerError, HttpResults);
+            }
+        }
+
         [Authorize]
         [HttpGet("me")]
         [ProducesResponseType(200, Type = typeof(StandardResponse<UserResponse>))]

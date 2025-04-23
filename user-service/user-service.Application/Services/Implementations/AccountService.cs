@@ -155,6 +155,21 @@ namespace user_service.Application.Services.Implementations
             };
         }
 
+        public async Task<List<UserResponse>> GetUserByIdsAsync(List<Guid> userIds)
+        {
+            var user = await _userRepository.GetByIdsAsync(userIds);
+
+            return user.Select(u => new UserResponse()
+            {
+                Id = u.Id,
+                Email = u.Email,
+                PhoneNumber = u.PhoneNumber,
+                EmailConfirmed = u.EmailConfirmed,
+                PhoneNumberConfirmed = u.PhoneNumberConfirmed,
+                CreatedAt = u.CreatedAt
+            }).ToList();
+        }
+
         public async Task ConfirmEmailAsync(Guid userId, string token)
         {
             // In a real app, you would validate the token

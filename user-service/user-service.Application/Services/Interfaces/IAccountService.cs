@@ -13,6 +13,7 @@ namespace user_service.Application.Services.Interfaces
         Task<UserResponse> RegisterAsync(RegisterUserRequest registerDto);
         Task<AuthResponse> LoginAsync(LoginRequest loginDto);
         Task<UserResponse> GetUserByIdAsync(Guid id);
+        Task<List<UserResponse>> GetUserByIdsAsync(List<Guid> userIds);
         Task ConfirmEmailAsync(Guid userId, string token);
         Task ConfirmPhoneNumberAsync(Guid userId, string token);
         Task AddUserToRoleAsync(Guid userId, string roleName);
